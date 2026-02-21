@@ -1,8 +1,29 @@
+# fastapi: Modern, fast web framework for building the backend API.
 fastapi
+
+# joblib: For saving and loading machine learning models efficiently.
 joblib
+
+# kaggle: For downloading datasets from the Kaggle API (e.g., fer2013).
+kaggle
+
+# nltk: Natural Language Toolkit for text preprocessing (tokenization, lemmatization).
 nltk
+
+# numpy: Fundamental package for numerical computing and array operations.
 numpy
+
+# pandas: For data manipulation and analysis, primarily for reading/writing CSV datasets.
 pandas
+
+# pydantic: Data validation and settings management, used heavily by FastAPI.
 pydantic
+
+# scikit-learn: Classical machine learning library used for text classification models.
 scikit-learn
+
+# tensorflow: Deep learning framework used for building and training neural networks.
+tensorflow
+
+# uvicorn: ASGI web server implementation for Python, used to run the FastAPI application.
 uvicorn
