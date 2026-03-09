@@ -49,7 +49,7 @@ emotion-detection-project
 ## Installation
 Clone the repository:
 
-git clone https://github.com/yourusername/emotion-detection-project.git
+git clone(https://github.com/springboardmentor443m-coder/Emotion-Detection-and-Music-Recommendation-System/edit/lithinkumar)
 cd emotion-detection-project
 
 Install dependencies:
