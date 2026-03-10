@@ -1,118 +1,84 @@
-# Emotion Detection API using CNN & Transfer Learning
+\#  AI — Emotion Detection + Music Recommendation
 
-## Overview
-This project implements a Facial Emotion Detection System using Deep Learning.  
-The model predicts human emotions from facial images using a Convolutional Neural Network (CNN) with Transfer Learning. The trained model is deployed as a REST API using FastAPI so users can upload an image and receive the predicted emotion.
 
-## Features
-- Facial emotion recognition using deep learning
-- CNN model trained using MobileNetV2
-- REST API built with FastAPI
-- API server powered by Uvicorn
-- Image preprocessing using Torchvision
-- Interactive API testing through Swagger UI
 
-## Emotion Classes
-The model predicts the following emotions:
-- Angry
-- Disgust
-- Fear
-- Happy
-- Sad
-- Surprise
-- Neutral
+CNN + VGG16 Transfer Learning | FER2013 Dataset | Flask + Vanilla JS
 
-## Technologies Used
-- Python
-- PyTorch
-- Torchvision
-- FastAPI
-- Uvicorn
-- Pillow (PIL)
-- Google Colab
 
-## Project Structure
-emotion-detection-project
-│
-├── api
-│   └── emotion_api.py
-│
-├── model
-│   └── emotion_model.pth
-│
-├── train_model.py
-│
-├── dataset
-│
-└── README.md
 
-## Installation
-Clone the repository:
+\## Features
 
-git clone(https://github.com/springboardmentor443m-coder/Emotion-Detection-and-Music-Recommendation-System/edit/lithinkumar)
-cd emotion-detection-project
+\- 📷 Live camera emotion detection
 
-Install dependencies:
+\- 🖼️ Image upload detection  
 
-pip install torch torchvision fastapi uvicorn pillow
+\- 💬 Text-based emotion detection (NLP)
 
-## Running the API
-Start the server:
+\- 🎵 Mood-matched music recommendations
 
-uvicorn api.emotion_api:app --host 0.0.0.0 --port 8000
 
-Server will run at:
 
-http://127.0.0.1:8000
+\## Setup
 
-Interactive API documentation:
 
-http://127.0.0.1:8000/docs
 
-## API Endpoint
+\### 1. Clone the repo
 
-POST /predict
+git clone https://github.com/YOUR\_USERNAME/moodsync-ai.git
 
-Upload a facial image and the API will return the predicted emotion.
+cd moodsync-ai
 
-Example Response:
 
-{
-  "emotion": "Happy"
-}
 
-## Running in Google Colab
-Since Google Colab runs on a remote server, the API must be exposed using ngrok.
+\### 2. Install Python dependencies
 
-Install ngrok:
+cd backend
 
-pip install pyngrok
+pip install -r requirements.txt
 
-Expose the server:
 
-from pyngrok import ngrok
-public_url = ngrok.connect(8000)
-print(public_url)
 
-Open the generated URL in your browser.
+\### 3. Download FER2013 dataset
 
-## System Workflow
+Get it from: https://www.kaggle.com/datasets/msambare/fer2013
 
-User uploads image  
-↓  
-FastAPI server receives image  
-↓  
-Image preprocessing and transformation  
-↓  
-CNN model predicts emotion  
-↓  
-API returns predicted emotion
+Extract to: dataset/fer2013/
 
-## Future Improvements
-- Real-time webcam emotion detection
-- Emotion-based music recommendation system
-- Web interface for uploading images
-- Deployment on cloud platforms
 
-## Author
-Lithin Kumar
+
+\### 4. Train the model
+
+cd backend/model
+
+python train\_model.py
+
+
+
+\### 5. Run the Flask server
+
+cd backend
+
+python app.py
+
+
+
+\### 6. Open frontend
+
+Open frontend/index.html in your browser
+
+Or use Live Server in VS Code
+
+
+
+\## Model Architecture
+
+\- Base: VGG16 pretrained on ImageNet
+
+\- Fine-tuned layers: last 4 conv blocks
+
+\- Custom head: Dense(512) → BN → Dropout → Dense(256) → Softmax(7)
+
+\- Dataset: FER2013 (35,887 images, 7 classes)
+
+\- Target accuracy: ~70%+ validation
+

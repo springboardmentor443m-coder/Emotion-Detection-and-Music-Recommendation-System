@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.h5
+*.pkl
+*.pt
+.env
+dataset/fer2013/
+.DS_Store
+Thumbs.db
+*.egg-info/
+dist/
+build/
