@@ -16,13 +16,6 @@
     --accent3: #06b6d4;
     --text: #f0f0ff;
     --muted: #6b6b8a;
-    --happy: #facc15;
-    --sad: #60a5fa;
-    --angry: #f87171;
-    --neutral: #94a3b8;
-    --surprised: #fb923c;
-    --fearful: #a78bfa;
-    --disgusted: #4ade80;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
@@ -33,15 +26,8 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-  .bg-orbs {
-    position: fixed; inset: 0; pointer-events: none; z-index: 0;
-    overflow: hidden;
-  }
-  .orb {
-    position: absolute; border-radius: 50%;
-    filter: blur(80px); opacity: 0.12;
-    animation: float 20s infinite ease-in-out;
-  }
+  .bg-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; animation: float 20s infinite ease-in-out; }
   .orb-1 { width:500px; height:500px; background: var(--accent); top:-100px; left:-100px; animation-delay:0s; }
   .orb-2 { width:400px; height:400px; background: var(--accent2); bottom:-50px; right:-50px; animation-delay:-7s; }
   .orb-3 { width:300px; height:300px; background: var(--accent3); top:40%; left:50%; animation-delay:-14s; }
@@ -54,74 +40,48 @@
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(7,7,15,0.8); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 0;
+    border-bottom: 1px solid var(--border); padding: 16px 0;
   }
-  .nav-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    max-width: 1400px; margin: 0 auto; padding: 0 24px;
-  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; padding: 0 24px; }
   .logo {
     font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
   }
   .nav-pills { display: flex; gap: 4px; }
   .nav-pill {
-    padding: 6px 16px; border-radius: 100px;
-    background: transparent; border: 1px solid transparent;
-    color: var(--muted); font-size: 13px; cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 500;
-    transition: all 0.2s;
+    padding: 6px 16px; border-radius: 100px; background: transparent;
+    border: 1px solid transparent; color: var(--muted); font-size: 13px;
+    cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-weight: 500; transition: all 0.2s;
   }
-  .nav-pill:hover, .nav-pill.active {
-    background: var(--card); border-color: var(--border); color: var(--text);
-  }
+  .nav-pill:hover, .nav-pill.active { background: var(--card); border-color: var(--border); color: var(--text); }
   .badge {
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: white; font-size: 11px; padding: 4px 12px;
-    border-radius: 100px; font-weight: 600; letter-spacing: 0.5px;
+    color: white; font-size: 11px; padding: 4px 12px; border-radius: 100px; font-weight: 600;
   }
   .hero {
     padding: 80px 0 60px;
     display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
   }
   .hero-label {
-    font-family: 'DM Mono', monospace; font-size: 11px;
-    color: var(--accent3); letter-spacing: 2px; text-transform: uppercase;
-    margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent3);
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
   }
-  .hero-label::before {
-    content:''; display:inline-block; width:20px; height:1px; background: var(--accent3);
-  }
+  .hero-label::before { content:''; display:inline-block; width:20px; height:1px; background: var(--accent3); }
   .hero-title {
     font-family: 'Syne', sans-serif; font-size: clamp(38px, 5vw, 64px);
-    font-weight: 800; line-height: 1.05; letter-spacing: -2px;
-    margin-bottom: 20px;
+    font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 20px;
   }
-  .hero-title span {
-    background: linear-gradient(135deg, var(--accent2), var(--accent));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .hero-desc {
-    color: var(--muted); font-size: 16px; line-height: 1.7;
-    margin-bottom: 32px; max-width: 460px;
-  }
+  .hero-title span { background: linear-gradient(135deg, var(--accent2), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-desc { color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 32px; max-width: 460px; }
   .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn-primary {
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: white; border: none; padding: 14px 28px;
-    border-radius: 12px; font-size: 15px; font-weight: 600;
-    cursor: pointer; font-family: 'Space Grotesk', sans-serif;
+    color: white; border: none; padding: 14px 28px; border-radius: 12px;
+    font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'Space Grotesk', sans-serif;
     transition: all 0.3s; position: relative; overflow: hidden;
   }
-  .btn-primary::after {
-    content:''; position:absolute; inset:0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .btn-primary:hover::after { opacity: 1; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.4); }
   .btn-secondary {
     background: var(--card); color: var(--text); border: 1px solid var(--border);
@@ -129,13 +89,9 @@
     cursor: pointer; font-family: 'Space Grotesk', sans-serif; transition: all 0.2s;
   }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-  .camera-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 24px; overflow: hidden; position: relative;
-  }
+  .camera-card { background: var(--card); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; }
   .camera-header {
-    padding: 16px 20px; background: var(--surface);
-    border-bottom: 1px solid var(--border);
+    padding: 16px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
     display: flex; align-items: center; justify-content: space-between;
   }
   .camera-header-left { display: flex; align-items: center; gap: 10px; }
@@ -143,211 +99,87 @@
   .dot-red { background: #ff5f56; }
   .dot-yellow { background: #ffbd2e; }
   .dot-green { background: #27c93f; }
-  .status-live {
-    display: flex; align-items: center; gap: 6px;
-    font-family: 'DM Mono', monospace; font-size: 11px; color: #27c93f;
-  }
-  .status-live::before {
-    content:''; display:block; width:6px; height:6px; border-radius:50%;
-    background: #27c93f; animation: blink 1s infinite;
-  }
+  .status-live { display: flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; color: #27c93f; }
+  .status-live::before { content:''; display:block; width:6px; height:6px; border-radius:50%; background: #27c93f; animation: blink 1s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
-  .camera-viewport {
-    width: 100%; aspect-ratio: 4/3; background: #0a0a18;
-    position: relative; display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  #videoEl {
-    width: 100%; height: 100%; object-fit: cover;
-    transform: scaleX(-1); display: none;
-  }
-  .camera-placeholder {
-    display: flex; flex-direction: column; align-items: center; gap: 16px;
-    color: var(--muted);
-  }
+  .camera-viewport { width: 100%; aspect-ratio: 4/3; background: #0a0a18; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  #videoEl { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); display: none; }
+  .camera-placeholder { display: flex; flex-direction: column; align-items: center; gap: 16px; color: var(--muted); }
   .camera-icon { font-size: 56px; opacity: 0.3; }
-  .camera-placeholder p { font-size: 14px; }
-  .scan-overlay {
-    position: absolute; inset: 0; pointer-events: none;
-    display: none;
-  }
+  .scan-overlay { position: absolute; inset: 0; pointer-events: none; display: none; }
   .scan-overlay.active { display: block; }
   .face-box {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 160px; height: 180px;
-    border: 2px solid rgba(124,58,237,0.6);
-    border-radius: 8px;
-    animation: scanPulse 2s infinite;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 160px; height: 180px; border: 2px solid rgba(124,58,237,0.6);
+    border-radius: 8px; animation: scanPulse 2s infinite;
   }
-  .face-box::before, .face-box::after {
-    content: ''; position: absolute;
-    width: 20px; height: 20px;
-    border-color: var(--accent2); border-style: solid;
-  }
+  .face-box::before, .face-box::after { content: ''; position: absolute; width: 20px; height: 20px; border-color: var(--accent2); border-style: solid; }
   .face-box::before { top:-2px; left:-2px; border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
   .face-box::after { bottom:-2px; right:-2px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
-  .scan-line {
-    position: absolute; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent3), transparent);
-    animation: scanLine 2s infinite linear;
-    top: 0;
-  }
-  @keyframes scanPulse {
-    0%,100%{ border-color: rgba(124,58,237,0.6); }
-    50%{ border-color: rgba(236,72,153,0.8); }
-  }
-  @keyframes scanLine {
-    0%{ top: 0; opacity: 1; }
-    100%{ top: 100%; opacity: 0.3; }
-  }
-  .camera-footer {
-    padding: 16px 20px;
-    display: flex; align-items: center; justify-content: space-between;
-    background: var(--surface); border-top: 1px solid var(--border);
-  }
+  .scan-line { position: absolute; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent3), transparent); animation: scanLine 2s infinite linear; top: 0; }
+  @keyframes scanPulse { 0%,100%{ border-color: rgba(124,58,237,0.6); } 50%{ border-color: rgba(236,72,153,0.8); } }
+  @keyframes scanLine { 0%{ top: 0; opacity: 1; } 100%{ top: 100%; opacity: 0.3; } }
+  .camera-footer { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; background: var(--surface); border-top: 1px solid var(--border); }
   .camera-controls { display: flex; gap: 8px; }
   .ctrl-btn {
     padding: 8px 20px; border-radius: 8px; border: 1px solid var(--border);
     background: var(--card); color: var(--text); font-size: 13px;
-    cursor: pointer; font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500; transition: all 0.2s;
-    display: flex; align-items: center; gap: 6px;
+    cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-weight: 500;
+    transition: all 0.2s; display: flex; align-items: center; gap: 6px;
   }
   .ctrl-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .ctrl-btn.capture {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-color: transparent; color: white;
-  }
+  .ctrl-btn.capture { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-color: transparent; color: white; }
   .ctrl-btn.capture:hover { box-shadow: 0 6px 24px rgba(124,58,237,0.5); transform: translateY(-1px); }
-  .model-tag {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    color: var(--muted); display: flex; align-items: center; gap: 4px;
-  }
+  .model-tag { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); }
   .model-tag span { color: var(--accent3); }
-  .main-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;
-  }
-  .panel {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 20px; overflow: hidden;
-  }
-  .panel-header {
-    padding: 18px 22px; border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .panel-title {
-    font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
-    display: flex; align-items: center; gap: 8px;
-  }
+  .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+  .panel-header { padding: 18px 22px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .panel-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; }
   .panel-body { padding: 22px; }
   .emotion-list { display: flex; flex-direction: column; gap: 12px; }
   .emotion-row { display: flex; flex-direction: column; gap: 6px; }
-  .emotion-row-top {
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 13px;
-  }
-  .emotion-name {
-    display: flex; align-items: center; gap: 8px; font-weight: 500;
-  }
+  .emotion-row-top { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+  .emotion-name { display: flex; align-items: center; gap: 8px; font-weight: 500; }
   .emotion-dot { width:8px; height:8px; border-radius:50%; }
-  .emotion-pct {
-    font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted);
-  }
-  .emotion-bar-bg {
-    height: 6px; background: rgba(255,255,255,0.05);
-    border-radius: 100px; overflow: hidden;
-  }
-  .emotion-bar-fill {
-    height: 100%; border-radius: 100px;
-    transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-    width: 0;
-  }
+  .emotion-pct { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+  .emotion-bar-bg { height: 6px; background: rgba(255,255,255,0.05); border-radius: 100px; overflow: hidden; }
+  .emotion-bar-fill { height: 100%; border-radius: 100px; transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1); width: 0; }
   .dominant-box {
-    background: var(--surface); border-radius: 14px;
-    padding: 20px; margin-bottom: 18px;
-    display: flex; align-items: center; gap: 16px;
-    border: 1px solid var(--border);
-    position: relative; overflow: hidden;
-  }
-  .dominant-box::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, var(--accent-glow, transparent), transparent);
-    opacity: 0.08;
+    background: var(--surface); border-radius: 14px; padding: 20px; margin-bottom: 18px;
+    display: flex; align-items: center; gap: 16px; border: 1px solid var(--border);
   }
   .emotion-emoji { font-size: 48px; line-height: 1; }
   .dominant-info { flex: 1; }
-  .dominant-label {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    color: var(--muted); letter-spacing: 2px; text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .dominant-emotion {
-    font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800;
-    line-height: 1; letter-spacing: -0.5px;
-  }
-  .dominant-conf {
-    font-size: 12px; color: var(--muted); margin-top: 4px;
-  }
+  .dominant-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  .dominant-emotion { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; line-height: 1; }
+  .dominant-conf { font-size: 12px; color: var(--muted); margin-top: 4px; }
   .dominant-conf span { color: var(--accent3); font-weight: 600; }
-  .conf-ring {
-    width: 60px; height: 60px; position: relative;
-  }
+  .conf-ring { width: 60px; height: 60px; position: relative; }
   .conf-ring svg { transform: rotate(-90deg); }
-  .conf-ring-text {
-    position: absolute; inset: 0; display: flex; align-items: center;
-    justify-content: center; font-family: 'DM Mono', monospace;
-    font-size: 12px; font-weight: 500; color: var(--accent3);
-  }
+  .conf-ring-text { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent3); }
   .music-list { display: flex; flex-direction: column; gap: 10px; }
   .music-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 12px 16px;
-    display: flex; align-items: center; gap: 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 16px; display: flex; align-items: center; gap: 14px;
     cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden;
   }
-  .music-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(90deg, rgba(124,58,237,0.06), transparent);
-    opacity: 0; transition: opacity 0.2s;
-  }
-  .music-card:hover::before { opacity: 1; }
   .music-card:hover { border-color: rgba(124,58,237,0.3); transform: translateX(4px); }
   .music-card.playing { border-color: var(--accent); }
   .music-thumb {
-    width: 44px; height: 44px; border-radius: 8px;
+    width: 44px; height: 44px; border-radius: 8px; overflow: hidden;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; flex-shrink: 0; position: relative;
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
   }
-  .music-thumb .play-indicator {
-    position: absolute; inset: 0; background: rgba(0,0,0,0.5);
-    border-radius: 8px; display: flex; align-items: center;
-    justify-content: center; opacity: 0; transition: opacity 0.2s;
-  }
-  .music-card:hover .play-indicator { opacity: 1; }
-  .music-card.playing .play-indicator { opacity: 1; }
   .music-info { flex: 1; min-width: 0; }
-  .music-title {
-    font-size: 13px; font-weight: 600; white-space: nowrap;
-    overflow: hidden; text-overflow: ellipsis;
-  }
+  .music-title { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .music-artist { font-size: 11px; color: var(--muted); margin-top: 2px; }
-  .music-meta {
-    display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
-  }
-  .music-duration {
-    font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted);
-  }
-  .music-match {
-    font-size: 10px; padding: 2px 8px; border-radius: 100px;
-    background: rgba(124,58,237,0.15); color: var(--accent);
-    font-weight: 600;
-  }
+  .music-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .music-duration { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+  .music-match { font-size: 10px; padding: 2px 8px; border-radius: 100px; background: rgba(124,58,237,0.15); color: var(--accent); font-weight: 600; }
   .player-bar {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 20px; padding: 20px 24px; margin-bottom: 24px;
-    display: flex; align-items: center; gap: 20px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    padding: 20px 24px; margin-bottom: 24px; display: flex; align-items: center; gap: 20px;
   }
   .player-thumb {
     width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0;
@@ -359,194 +191,79 @@
   .player-info { flex: 1; min-width: 0; }
   .player-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
   .player-artist { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
-  .waveform {
-    height: 28px; display: flex; align-items: center; gap: 2px;
-    cursor: pointer;
-  }
-  .wave-bar {
-    width: 3px; background: rgba(124,58,237,0.3); border-radius: 2px;
-    transition: background 0.1s; flex-shrink: 0;
-  }
+  .waveform { height: 28px; display: flex; align-items: center; gap: 2px; }
+  .wave-bar { width: 3px; background: rgba(124,58,237,0.3); border-radius: 2px; flex-shrink: 0; }
   .wave-bar.active { background: var(--accent); }
   .wave-bar.passed { background: rgba(124,58,237,0.6); }
-  .player-controls {
-    display: flex; align-items: center; gap: 12px; flex-shrink: 0;
-  }
+  .player-controls { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
   .player-btn {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--surface); border: 1px solid var(--border);
-    color: var(--text); cursor: pointer; font-size: 16px;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s;
+    width: 40px; height: 40px; border-radius: 50%; background: var(--surface);
+    border: 1px solid var(--border); color: var(--text); cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center; transition: all 0.2s;
   }
   .player-btn:hover { border-color: var(--accent); color: var(--accent); }
   .player-btn.play-pause {
     width: 48px; height: 48px; font-size: 20px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    border-color: transparent; color: white;
-    box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+    border-color: transparent; color: white; box-shadow: 0 4px 20px rgba(124,58,237,0.4);
   }
-  .player-btn.play-pause:hover { transform: scale(1.05); }
-  .player-time {
-    font-family: 'DM Mono', monospace; font-size: 11px;
-    color: var(--muted); white-space: nowrap;
-  }
-  .stats-row {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;
-  }
-  .stat-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 20px;
-  }
-  .stat-label {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .stat-value {
-    font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800;
-    letter-spacing: -1px; line-height: 1;
-  }
+  .player-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+  .stat-value { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
   .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
-  .stat-trend {
-    display: inline-flex; align-items: center; gap: 3px;
-    font-size: 11px; margin-top: 6px; padding: 2px 8px;
-    border-radius: 100px; font-weight: 600;
-  }
-  .trend-up { background: rgba(74,222,128,0.1); color: #4ade80; }
-  .trend-down { background: rgba(248,113,113,0.1); color: #f87171; }
-  .section-header {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
-  }
-  .section-title {
-    font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-  .section-tag {
-    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px;
-    text-transform: uppercase; color: var(--muted); padding: 4px 10px;
-    border: 1px solid var(--border); border-radius: 100px;
-  }
-  .arch-pipeline {
-    display: flex; align-items: center; gap: 0; overflow-x: auto; padding: 4px 0;
-  }
-  .arch-step {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 16px 20px; min-width: 150px;
-    flex-shrink: 0; position: relative;
-  }
-  .arch-step::after {
-    content: '→'; position: absolute; right: -22px; top: 50%;
-    transform: translateY(-50%); color: var(--muted); font-size: 18px; z-index: 2;
-  }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .section-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; }
+  .section-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); padding: 4px 10px; border: 1px solid var(--border); border-radius: 100px; }
+  .arch-pipeline { display: flex; align-items: center; overflow-x: auto; padding: 4px 0; gap: 16px; }
+  .arch-step { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; min-width: 150px; flex-shrink: 0; position: relative; }
+  .arch-step::after { content: '→'; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 18px; z-index: 2; }
   .arch-step:last-child::after { display: none; }
   .arch-icon { font-size: 24px; margin-bottom: 8px; }
   .arch-step-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
   .arch-step-desc { font-size: 10px; color: var(--muted); line-height: 1.4; }
   .arch-step.highlight { border-color: rgba(124,58,237,0.4); background: rgba(124,58,237,0.05); }
-  .metrics-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;
-  }
-  .history-row {
-    display: flex; align-items: center; gap: 12px; padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .history-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .history-row:last-child { border-bottom: none; }
-  .history-time {
-    font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); min-width: 70px;
-  }
-  .history-emotion {
-    font-size: 13px; font-weight: 600; flex: 1; display: flex; align-items: center; gap: 6px;
-  }
+  .history-time { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); min-width: 70px; }
+  .history-emotion { font-size: 13px; font-weight: 600; flex: 1; display: flex; align-items: center; gap: 6px; }
   .history-song { font-size: 12px; color: var(--muted); flex: 2; }
   .history-conf { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent3); }
-  .upload-zone {
-    border: 2px dashed var(--border); border-radius: 16px;
-    padding: 40px; text-align: center; cursor: pointer;
-    transition: all 0.3s; background: var(--surface);
-  }
-  .upload-zone:hover, .upload-zone.drag-over {
-    border-color: var(--accent); background: rgba(124,58,237,0.05);
-  }
+  .upload-zone { border: 2px dashed var(--border); border-radius: 16px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s; background: var(--surface); }
+  .upload-zone:hover, .upload-zone.drag-over { border-color: var(--accent); background: rgba(124,58,237,0.05); }
   .upload-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.5; }
   .upload-text { font-size: 14px; color: var(--muted); }
   .upload-text strong { color: var(--text); }
-  /* TEXT DETECTION SECTION */
-  .text-detect-box {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 20px; padding: 24px; margin-bottom: 24px;
-  }
-  .text-input-area {
-    width: 100%; background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 16px; color: var(--text);
-    font-family: 'Space Grotesk', sans-serif; font-size: 14px;
-    resize: vertical; min-height: 100px; outline: none;
-    transition: border-color 0.2s;
-  }
+  .text-detect-box { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 24px; margin-bottom: 24px; }
+  .text-input-area { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; color: var(--text); font-family: 'Space Grotesk', sans-serif; font-size: 14px; resize: vertical; min-height: 100px; outline: none; transition: border-color 0.2s; }
   .text-input-area:focus { border-color: var(--accent); }
   .text-input-area::placeholder { color: var(--muted); }
-  .text-analyze-btn {
-    margin-top: 12px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: white; border: none; padding: 12px 28px;
-    border-radius: 10px; font-size: 14px; font-weight: 600;
-    cursor: pointer; font-family: 'Space Grotesk', sans-serif;
-    transition: all 0.2s;
-  }
+  .text-analyze-btn { margin-top: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; border: none; padding: 12px 28px; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Space Grotesk', sans-serif; transition: all 0.2s; }
   .text-analyze-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.4); }
-  .text-result {
-    margin-top: 16px; padding: 16px; background: var(--surface);
-    border-radius: 12px; border: 1px solid var(--border);
-    display: none;
-  }
+  .text-result { margin-top: 16px; padding: 16px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); display: none; }
   .text-result.show { display: block; }
   .toast {
-    position: fixed; bottom: 24px; right: 24px;
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 14px 20px;
-    display: flex; align-items: center; gap: 12px;
+    position: fixed; bottom: 24px; right: 24px; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; gap: 12px;
     z-index: 999; transform: translateY(80px); opacity: 0;
-    transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
-    max-width: 320px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); max-width: 320px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   }
   .toast.show { transform: translateY(0); opacity: 1; }
   .toast-icon { font-size: 24px; }
   .toast-title { font-weight: 600; font-size: 14px; }
   .toast-msg { font-size: 12px; color: var(--muted); }
-  .processing-overlay {
-    position: absolute; inset: 0;
-    background: rgba(7,7,15,0.85); backdrop-filter: blur(4px);
-    display: none; align-items: center; justify-content: center;
-    flex-direction: column; gap: 16px; border-radius: 24px;
-  }
+  .processing-overlay { position: absolute; inset: 0; background: rgba(7,7,15,0.85); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; flex-direction: column; gap: 16px; border-radius: 24px; }
   .processing-overlay.active { display: flex; }
-  .spinner {
-    width: 48px; height: 48px; border-radius: 50%;
-    border: 3px solid rgba(124,58,237,0.2);
-    border-top-color: var(--accent);
-    animation: spinEl 0.8s linear infinite;
-  }
+  .spinner { width: 48px; height: 48px; border-radius: 50%; border: 3px solid rgba(124,58,237,0.2); border-top-color: var(--accent); animation: spinEl 0.8s linear infinite; }
   @keyframes spinEl { to { transform: rotate(360deg); } }
-  .processing-text {
-    font-family: 'DM Mono', monospace; font-size: 13px;
-    color: var(--accent3); letter-spacing: 1px;
-  }
+  .processing-text { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent3); letter-spacing: 1px; }
   #captureCanvas { display: none; }
-  footer {
-    border-top: 1px solid var(--border); padding: 32px 0; margin-top: 60px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .footer-brand {
-    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
+  footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .footer-tech { display: flex; gap: 8px; flex-wrap: wrap; }
-  .tech-tag {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    color: var(--muted); padding: 4px 10px;
-    border: 1px solid var(--border); border-radius: 100px;
-  }
+  .tech-tag { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); padding: 4px 10px; border: 1px solid var(--border); border-radius: 100px; }
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
     .main-grid { grid-template-columns: 1fr; }
@@ -580,13 +297,13 @@
 
 <div class="container">
 
-  <!-- SECTION: LIVE CAMERA DETECTION -->
+  <!-- CAMERA SECTION -->
   <div id="sec-detect">
     <div class="hero">
       <div>
         <div class="hero-label">Live Camera Detection</div>
         <h1 class="hero-title">Detect Your Mood,<br/><span>Play Your Vibe</span></h1>
-        <p class="hero-desc">CNN with VGG16 Transfer Learning analyzes your facial expression in real-time using your webcam and maps it to curated music recommendations.</p>
+        <p class="hero-desc">CNN with VGG16 Transfer Learning analyzes your facial expression in real-time and maps it to curated music recommendations via Deezer.</p>
         <div class="hero-btns">
           <button class="btn-primary" onclick="startCamera()">▶ Start Camera</button>
           <button class="btn-secondary" onclick="showSection('text')">💬 Try Text Mode</button>
@@ -601,7 +318,7 @@
           </div>
           <div class="status-live" id="liveStatus">IDLE</div>
         </div>
-        <div class="camera-viewport" id="viewport">
+        <div class="camera-viewport">
           <video id="videoEl" autoplay muted playsinline></video>
           <canvas id="captureCanvas"></canvas>
           <div class="camera-placeholder" id="camPlaceholder">
@@ -622,14 +339,14 @@
             <button class="ctrl-btn" onclick="startCamera()" id="startBtn">▶ Start</button>
             <button class="ctrl-btn capture" onclick="captureAndAnalyze()" id="captureBtn" disabled>⚡ Analyze</button>
             <button class="ctrl-btn" onclick="stopCamera()" id="stopBtn" style="display:none;">⏹ Stop</button>
-            <button class="ctrl-btn" onclick="runDemoAnalysis()" style="margin-left:4px;">🎲 Demo</button>
+            <button class="ctrl-btn" onclick="runDemoAnalysis()">🎲 Demo</button>
           </div>
           <div class="model-tag">Model: <span>VGG16-FER2013</span> | FPS: <span id="fpsTag">—</span></div>
         </div>
       </div>
     </div>
 
-    <!-- PLAYER BAR -->
+    <!-- PLAYER -->
     <div class="player-bar">
       <div class="player-thumb" id="playerThumb">🎵</div>
       <div class="player-info">
@@ -645,7 +362,6 @@
       </div>
     </div>
 
-    <!-- EMOTION + MUSIC GRID -->
     <div class="main-grid">
       <div class="panel">
         <div class="panel-header">
@@ -653,7 +369,7 @@
           <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">SOFTMAX OUTPUT</div>
         </div>
         <div class="panel-body">
-          <div class="dominant-box" id="dominantBox">
+          <div class="dominant-box">
             <div class="emotion-emoji" id="dominantEmoji">🤔</div>
             <div class="dominant-info">
               <div class="dominant-label">Dominant Emotion</div>
@@ -663,10 +379,7 @@
             <div class="conf-ring">
               <svg width="60" height="60" viewBox="0 0 60 60">
                 <circle cx="30" cy="30" r="24" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="4"/>
-                <circle id="confCircle" cx="30" cy="30" r="24" fill="none"
-                  stroke="var(--accent3)" stroke-width="4"
-                  stroke-dasharray="150.8" stroke-dashoffset="150.8"
-                  stroke-linecap="round" style="transition:stroke-dashoffset 1s ease;"/>
+                <circle id="confCircle" cx="30" cy="30" r="24" fill="none" stroke="var(--accent3)" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="150.8" stroke-linecap="round" style="transition:stroke-dashoffset 1s ease;"/>
               </svg>
               <div class="conf-ring-text" id="confRingText">0%</div>
             </div>
@@ -679,11 +392,11 @@
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">🎵 Music Recommendations</div>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">MOOD-MATCHED</div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">DEEZER · MOOD-MATCHED</div>
         </div>
         <div class="panel-body">
           <div class="music-list" id="musicList">
-            <div style="text-align:center;padding:40px 0;color:var(--muted);font-size:14px;">
+            <div style="text-align:center;padding:40px 0;color:var(--muted);">
               <div style="font-size:36px;margin-bottom:12px;opacity:0.3">🎼</div>
               Detect an emotion to get recommendations
             </div>
@@ -693,7 +406,7 @@
     </div>
   </div>
 
-  <!-- SECTION: IMAGE UPLOAD DETECTION -->
+  <!-- IMAGE SECTION -->
   <div id="sec-image" style="display:none;">
     <div style="padding:60px 0 24px;">
       <div class="section-header">
@@ -709,18 +422,16 @@
             onclick="document.getElementById('fileInput').click()">
             <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleFileUpload(event)"/>
             <div class="upload-icon">🖼️</div>
-            <div class="upload-text"><strong>Click or drag a face image here</strong><br/>Supports JPG, PNG, WEBP — Max 10MB</div>
+            <div class="upload-text"><strong>Click or drag a face image here</strong><br/>Supports JPG, PNG, WEBP</div>
           </div>
           <div id="uploadedPreview" style="margin-top:16px;display:none;">
-            <img id="previewImg" style="width:100%;border-radius:12px;border:1px solid var(--border);" alt="Uploaded face"/>
+            <img id="previewImg" style="width:100%;border-radius:12px;border:1px solid var(--border);" alt="preview"/>
           </div>
         </div>
         <div class="panel">
-          <div class="panel-header">
-            <div class="panel-title">🧠 Detection Result</div>
-          </div>
+          <div class="panel-header"><div class="panel-title">🧠 Detection Result</div></div>
           <div class="panel-body">
-            <div class="dominant-box" id="imgDominantBox">
+            <div class="dominant-box">
               <div class="emotion-emoji" id="imgEmoji">🖼️</div>
               <div class="dominant-info">
                 <div class="dominant-label">Detected Emotion</div>
@@ -728,59 +439,50 @@
                 <div class="dominant-conf">Confidence: <span id="imgConf">—</span></div>
               </div>
             </div>
-            <div class="emotion-list" id="imgEmotionList">
-              <div style="text-align:center;padding:20px;color:var(--muted);font-size:13px;">Results will appear here</div>
-            </div>
+            <div class="emotion-list" id="imgEmotionList"><div style="text-align:center;padding:20px;color:var(--muted);">Results will appear here</div></div>
           </div>
         </div>
       </div>
-      <div style="margin-top:24px;">
-        <div class="panel">
-          <div class="panel-header">
-            <div class="panel-title">🎵 Recommended Songs</div>
-          </div>
-          <div class="panel-body">
-            <div class="music-list" id="imgMusicList">
-              <div style="text-align:center;padding:20px;color:var(--muted);">Upload an image to get song recommendations</div>
-            </div>
-          </div>
+      <div style="margin-top:24px;" class="panel">
+        <div class="panel-header"><div class="panel-title">🎵 Recommended Songs</div></div>
+        <div class="panel-body">
+          <div class="music-list" id="imgMusicList"><div style="text-align:center;padding:20px;color:var(--muted);">Upload an image to get recommendations</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION: TEXT EMOTION DETECTION -->
+  <!-- TEXT SECTION -->
   <div id="sec-text" style="display:none;">
     <div style="padding:60px 0 24px;">
       <div class="section-header">
         <div class="section-title">Text Emotion Detection</div>
-        <div class="section-tag">NLP — DistilRoBERTa</div>
+        <div class="section-tag">NLP Model</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
         <div>
           <div class="text-detect-box">
             <div class="panel-title" style="margin-bottom:16px;">💬 Enter your text</div>
-            <textarea class="text-input-area" id="textInput"
-              placeholder="Type how you feel... e.g. 'I am so excited about today!' or 'I feel really down and tired'"></textarea>
-            <div style="display:flex;gap:10px;align-items:center;margin-top:12px;">
+            <textarea class="text-input-area" id="textInput" placeholder="Type how you feel... e.g. I am so excited and happy today!"></textarea>
+            <div style="display:flex;gap:10px;margin-top:12px;">
               <button class="text-analyze-btn" onclick="analyzeText()">🔍 Analyze Emotion</button>
-              <button class="ctrl-btn" onclick="loadTextExample()">📝 Load Example</button>
-              <button class="ctrl-btn" onclick="clearText()">🗑️ Clear</button>
+              <button class="ctrl-btn" onclick="loadTextExample()">📝 Example</button>
+              <button class="ctrl-btn" onclick="document.getElementById('textInput').value=''">🗑️ Clear</button>
             </div>
           </div>
           <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;">
             <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">Quick Examples</div>
-            <div style="display:flex;flex-direction:column;gap:8px;" id="examplesList"></div>
+            <div id="examplesList" style="display:flex;flex-direction:column;gap:8px;"></div>
           </div>
         </div>
         <div>
-          <div class="panel">
+          <div class="panel" style="margin-bottom:16px;">
             <div class="panel-header">
-              <div class="panel-title">🧠 NLP Analysis Result</div>
+              <div class="panel-title">🧠 NLP Result</div>
               <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">TRANSFORMERS</div>
             </div>
             <div class="panel-body">
-              <div class="dominant-box" id="textDominantBox">
+              <div class="dominant-box">
                 <div class="emotion-emoji" id="textEmoji">💬</div>
                 <div class="dominant-info">
                   <div class="dominant-label">Detected Emotion</div>
@@ -788,21 +490,17 @@
                   <div class="dominant-conf">Confidence: <span id="textConf">—</span></div>
                 </div>
               </div>
-              <div class="emotion-list" id="textEmotionList">
-                <div style="text-align:center;padding:20px;color:var(--muted);font-size:13px;">Results will appear here</div>
-              </div>
+              <div class="emotion-list" id="textEmotionList"><div style="text-align:center;padding:20px;color:var(--muted);">Results here</div></div>
               <div class="text-result" id="textResult">
                 <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:8px;">ANALYZED TEXT</div>
-                <div id="textResultContent" style="font-size:13px;color:var(--text);line-height:1.6;font-style:italic;"></div>
+                <div id="textResultContent" style="font-size:13px;font-style:italic;line-height:1.6;"></div>
               </div>
             </div>
           </div>
-          <div class="panel" style="margin-top:16px;">
+          <div class="panel">
             <div class="panel-header"><div class="panel-title">🎵 Mood Songs</div></div>
             <div class="panel-body">
-              <div class="music-list" id="textMusicList">
-                <div style="text-align:center;padding:20px;color:var(--muted);">Analyze text to get recommendations</div>
-              </div>
+              <div class="music-list" id="textMusicList"><div style="text-align:center;padding:20px;color:var(--muted);">Analyze text to get recommendations</div></div>
             </div>
           </div>
         </div>
@@ -810,7 +508,7 @@
     </div>
   </div>
 
-  <!-- SECTION: ANALYTICS -->
+  <!-- ANALYTICS SECTION -->
   <div id="sec-analytics" style="display:none;">
     <div style="padding:60px 0 24px;">
       <div class="section-header">
@@ -822,7 +520,6 @@
           <div class="stat-label">Total Detections</div>
           <div class="stat-value" id="statDetections">0</div>
           <div class="stat-sub">This session</div>
-          <div class="stat-trend trend-up">↑ Active</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Avg Confidence</div>
@@ -843,23 +540,17 @@
       <div class="metrics-grid">
         <div class="panel">
           <div class="panel-header"><div class="panel-title">📊 Emotion Distribution</div></div>
-          <div class="panel-body">
-            <div id="emotionChart">
-              <div style="color:var(--muted);font-size:13px;text-align:center;padding:30px 0;">Run detections to see distribution</div>
-            </div>
-          </div>
+          <div class="panel-body"><div id="emotionChart"><div style="color:var(--muted);text-align:center;padding:30px 0;font-size:13px;">Run detections to see distribution</div></div></div>
         </div>
         <div class="panel">
           <div class="panel-header"><div class="panel-title">📈 Confidence Over Time</div></div>
-          <div class="panel-body">
-            <canvas id="confChart" width="400" height="160" style="width:100%;"></canvas>
-          </div>
+          <div class="panel-body"><canvas id="confChart" width="400" height="160" style="width:100%;"></canvas></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION: MODEL INFO -->
+  <!-- MODEL SECTION -->
   <div id="sec-model" style="display:none;">
     <div style="padding:60px 0 24px;">
       <div class="section-header">
@@ -867,33 +558,12 @@
         <div class="section-tag">CNN + Transfer Learning</div>
       </div>
       <div style="margin-bottom:24px;">
-        <div style="font-size:13px;color:var(--muted);margin-bottom:16px;">Processing Pipeline</div>
-        <div class="arch-pipeline" style="gap:16px;">
-          <div class="arch-step">
-            <div class="arch-icon">📸</div>
-            <div class="arch-step-title">Input</div>
-            <div class="arch-step-desc">48×48 Grayscale<br/>Face crop via Haar</div>
-          </div>
-          <div class="arch-step highlight">
-            <div class="arch-icon">🧱</div>
-            <div class="arch-step-title">VGG16 Backbone</div>
-            <div class="arch-step-desc">Pretrained ImageNet<br/>Frozen conv layers 1–15</div>
-          </div>
-          <div class="arch-step highlight">
-            <div class="arch-icon">⚡</div>
-            <div class="arch-step-title">Fine-tuned Head</div>
-            <div class="arch-step-desc">Dense 512 + Dropout 0.5<br/>BatchNorm + ReLU</div>
-          </div>
-          <div class="arch-step">
-            <div class="arch-icon">🎯</div>
-            <div class="arch-step-title">Classifier</div>
-            <div class="arch-step-desc">Dense 7 + Softmax<br/>FER-2013 trained</div>
-          </div>
-          <div class="arch-step">
-            <div class="arch-icon">🎵</div>
-            <div class="arch-step-title">Music Engine</div>
-            <div class="arch-step-desc">Emotion → Valence<br/>Arousal mapping</div>
-          </div>
+        <div class="arch-pipeline">
+          <div class="arch-step"><div class="arch-icon">📸</div><div class="arch-step-title">Input</div><div class="arch-step-desc">48×48 Grayscale<br/>Haar face crop</div></div>
+          <div class="arch-step highlight"><div class="arch-icon">🧱</div><div class="arch-step-title">VGG16 Backbone</div><div class="arch-step-desc">Pretrained ImageNet<br/>Frozen layers 1–15</div></div>
+          <div class="arch-step highlight"><div class="arch-icon">⚡</div><div class="arch-step-title">Fine-tuned Head</div><div class="arch-step-desc">Dense 512 + Dropout<br/>BatchNorm + ReLU</div></div>
+          <div class="arch-step"><div class="arch-icon">🎯</div><div class="arch-step-title">Classifier</div><div class="arch-step-desc">Dense 7 + Softmax<br/>FER-2013 trained</div></div>
+          <div class="arch-step"><div class="arch-icon">🎵</div><div class="arch-step-title">Music Engine</div><div class="arch-step-desc">Emotion → Deezer<br/>API recommendations</div></div>
         </div>
       </div>
       <div class="metrics-grid">
@@ -901,34 +571,12 @@
           <div class="panel-header"><div class="panel-title">🏋️ Training Config</div></div>
           <div class="panel-body">
             <div style="display:flex;flex-direction:column;gap:10px;">
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Base Model</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">VGG16 (ImageNet)</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Dataset</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">FER-2013 (35,887 imgs)</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Optimizer</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">Adam lr=0.0001</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Batch Size</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">32</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Epochs</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">50 (Early Stopping)</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-                <span style="color:var(--muted);font-size:13px;">Augmentation</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">Flip, Rotate, Zoom</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;">
-                <span style="color:var(--muted);font-size:13px;">Input Size</span>
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">224×224×3</span>
-              </div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--muted);font-size:13px;">Base Model</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">VGG16 (ImageNet)</span></div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--muted);font-size:13px;">Dataset</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">FER-2013 (35,887 imgs)</span></div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--muted);font-size:13px;">Optimizer</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">Adam lr=0.0001</span></div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--muted);font-size:13px;">Batch Size</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">64</span></div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--muted);font-size:13px;">Epochs</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">20 (Early Stopping)</span></div>
+              <div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="color:var(--muted);font-size:13px;">Input Size</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent3);">224×224×3</span></div>
             </div>
           </div>
         </div>
@@ -936,22 +584,10 @@
           <div class="panel-header"><div class="panel-title">📊 Model Performance</div></div>
           <div class="panel-body">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;">
-              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#4ade80;">71.2%</div>
-                <div style="font-size:11px;color:var(--muted);margin-top:4px;">Val Accuracy</div>
-              </div>
-              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent3);">68.8%</div>
-                <div style="font-size:11px;color:var(--muted);margin-top:4px;">Test Accuracy</div>
-              </div>
-              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent);">0.71</div>
-                <div style="font-size:11px;color:var(--muted);margin-top:4px;">F1 Score</div>
-              </div>
-              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent2);">12ms</div>
-                <div style="font-size:11px;color:var(--muted);margin-top:4px;">Inference Time</div>
-              </div>
+              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#4ade80;">71.2%</div><div style="font-size:11px;color:var(--muted);">Val Accuracy</div></div>
+              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent3);">68.8%</div><div style="font-size:11px;color:var(--muted);">Test Accuracy</div></div>
+              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent);">0.71</div><div style="font-size:11px;color:var(--muted);">F1 Score</div></div>
+              <div style="background:var(--surface);border-radius:12px;padding:14px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent2);">12ms</div><div style="font-size:11px;color:var(--muted);">Inference</div></div>
             </div>
             <div style="font-size:11px;color:var(--muted);margin-bottom:8px;">Per-class accuracy:</div>
             <div id="perClassAccuracy" style="display:flex;flex-direction:column;gap:6px;"></div>
@@ -959,18 +595,13 @@
         </div>
       </div>
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-title">📈 Training Curves</div>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">Loss and Accuracy over Epochs</div>
-        </div>
-        <div class="panel-body">
-          <canvas id="trainingChart" width="800" height="200" style="width:100%;height:200px;"></canvas>
-        </div>
+        <div class="panel-header"><div class="panel-title">📈 Training Curves</div></div>
+        <div class="panel-body"><canvas id="trainingChart" width="800" height="200" style="width:100%;height:200px;"></canvas></div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION: HISTORY -->
+  <!-- HISTORY SECTION -->
   <div id="sec-history" style="display:none;">
     <div style="padding:60px 0 24px;">
       <div class="section-header">
@@ -988,10 +619,8 @@
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- FOOTER -->
 <div class="container">
   <footer>
     <div class="footer-brand">MoodSync AI</div>
@@ -1002,14 +631,13 @@
       <span class="tech-tag">FER-2013</span>
       <span class="tech-tag">OpenCV</span>
       <span class="tech-tag">Flask</span>
-      <span class="tech-tag">HuggingFace</span>
+      <span class="tech-tag">Deezer API</span>
       <span class="tech-tag">HTML CSS JS</span>
     </div>
     <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">lithinkumar · CNN Transfer Learning</div>
   </footer>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast">
   <div class="toast-icon" id="toastIcon">✅</div>
   <div>
@@ -1019,6 +647,19 @@
 </div>
 
 <script>
+const API_BASE = 'http://127.0.0.1:5000/api';
+let currentAudio  = null;
+let allTracks     = [];
+let stream        = null;
+let isPlaying     = false;
+let currentTrack  = null;
+let currentTrackIdx = 0;
+let currentEmotion  = null;
+let waveInterval  = null;
+let wavePos       = 0;
+let fpsInterval   = null;
+let sessionData   = { detections:0, songs:0, emotions:{}, confidences:[] };
+
 const EMOTIONS = [
   { id:'happy',     label:'Happy',     emoji:'😄', color:'#facc15' },
   { id:'sad',       label:'Sad',       emoji:'😢', color:'#60a5fa' },
@@ -1029,56 +670,14 @@ const EMOTIONS = [
   { id:'disgusted', label:'Disgusted', emoji:'🤢', color:'#4ade80' },
 ];
 
-const MUSIC_DB = {
-  happy:[
-    {emoji:'🌞',title:'Good as Hell',artist:'Lizzo',duration:'3:38',match:'98%'},
-    {emoji:'🎉',title:'Happy',artist:'Pharrell Williams',duration:'3:53',match:'97%'},
-    {emoji:'✨',title:'Levitating',artist:'Dua Lipa',duration:'3:23',match:'94%'},
-    {emoji:'🌈',title:"Can't Stop the Feeling",artist:'Justin Timberlake',duration:'3:56',match:'91%'},
-    {emoji:'💃',title:'Shake It Off',artist:'Taylor Swift',duration:'3:39',match:'88%'},
-  ],
-  sad:[
-    {emoji:'🌧',title:'The Night We Met',artist:'Lord Huron',duration:'3:28',match:'97%'},
-    {emoji:'💙',title:'Skinny Love',artist:'Bon Iver',duration:'3:58',match:'95%'},
-    {emoji:'🌊',title:'Someone Like You',artist:'Adele',duration:'4:45',match:'92%'},
-    {emoji:'🕯',title:'Fix You',artist:'Coldplay',duration:'4:55',match:'89%'},
-    {emoji:'🌙',title:'Breathe 2 AM',artist:'Anna Nalick',duration:'4:27',match:'86%'},
-  ],
-  angry:[
-    {emoji:'🔥',title:'Break Stuff',artist:'Limp Bizkit',duration:'2:46',match:'97%'},
-    {emoji:'⚡',title:'Killing in the Name',artist:'Rage Against the Machine',duration:'5:13',match:'94%'},
-    {emoji:'💢',title:'Numb',artist:'Linkin Park',duration:'3:05',match:'92%'},
-    {emoji:'🥊',title:'Eye of the Tiger',artist:'Survivor',duration:'4:04',match:'88%'},
-    {emoji:'🎸',title:'Given Up',artist:'Linkin Park',duration:'3:09',match:'85%'},
-  ],
-  neutral:[
-    {emoji:'☕',title:'Sunset Lover',artist:'Petit Biscuit',duration:'3:56',match:'95%'},
-    {emoji:'🌿',title:'Somewhere Only We Know',artist:'Keane',duration:'3:57',match:'92%'},
-    {emoji:'🎧',title:'Coffee',artist:'beabadoobee',duration:'1:53',match:'90%'},
-    {emoji:'🌤',title:'Yellow',artist:'Coldplay',duration:'4:29',match:'87%'},
-    {emoji:'🎵',title:'Budapest',artist:'George Ezra',duration:'3:15',match:'84%'},
-  ],
-  surprised:[
-    {emoji:'🎆',title:'Supermassive Black Hole',artist:'Muse',duration:'3:32',match:'96%'},
-    {emoji:'🚀',title:'Bohemian Rhapsody',artist:'Queen',duration:'5:55',match:'94%'},
-    {emoji:'💫',title:'Starman',artist:'David Bowie',duration:'4:16',match:'90%'},
-    {emoji:'⚡',title:'Mr. Brightside',artist:'The Killers',duration:'3:42',match:'87%'},
-    {emoji:'🎭',title:'Take On Me',artist:'A-ha',duration:'3:45',match:'83%'},
-  ],
-  fearful:[
-    {emoji:'🌑',title:'Sound of Silence',artist:'Simon and Garfunkel',duration:'3:05',match:'96%'},
-    {emoji:'🕷',title:'Creep',artist:'Radiohead',duration:'3:56',match:'93%'},
-    {emoji:'🌫',title:'Mad World',artist:'Gary Jules',duration:'3:07',match:'91%'},
-    {emoji:'💀',title:'Cemetery Gates',artist:'The Smiths',duration:'5:31',match:'88%'},
-    {emoji:'🌀',title:'Black',artist:'Pearl Jam',duration:'5:43',match:'84%'},
-  ],
-  disgusted:[
-    {emoji:'🐍',title:'Toxicity',artist:'System of a Down',duration:'3:38',match:'95%'},
-    {emoji:'🔩',title:'Down with the Sickness',artist:'Disturbed',duration:'4:37',match:'89%'},
-    {emoji:'🥊',title:'Cochise',artist:'Audioslave',duration:'3:44',match:'82%'},
-    {emoji:'🎸',title:'Chop Suey',artist:'System of a Down',duration:'3:30',match:'86%'},
-    {emoji:'💢',title:'Headstrong',artist:'Trapt',duration:'3:42',match:'80%'},
-  ],
+const FALLBACK_MUSIC = {
+  happy:     [{title:'Good as Hell',artist:'Lizzo',duration:'3:38',match:'98%',preview_url:null,spotify_url:'https://www.deezer.com/search/good%20as%20hell'},{title:'Happy',artist:'Pharrell Williams',duration:'3:53',match:'97%',preview_url:null,spotify_url:'https://www.deezer.com/search/happy%20pharrell'},{title:'Levitating',artist:'Dua Lipa',duration:'3:23',match:'94%',preview_url:null,spotify_url:'https://www.deezer.com/search/levitating'},{title:'Shake It Off',artist:'Taylor Swift',duration:'3:39',match:'91%',preview_url:null,spotify_url:'https://www.deezer.com/search/shake%20it%20off'},{title:"Can't Stop the Feeling",artist:'Justin Timberlake',duration:'3:56',match:'88%',preview_url:null,spotify_url:'https://www.deezer.com/search/cant%20stop%20the%20feeling'}],
+  sad:       [{title:'Someone Like You',artist:'Adele',duration:'4:45',match:'97%',preview_url:null,spotify_url:'https://www.deezer.com/search/someone%20like%20you'},{title:'Fix You',artist:'Coldplay',duration:'4:55',match:'95%',preview_url:null,spotify_url:'https://www.deezer.com/search/fix%20you'},{title:'The Night We Met',artist:'Lord Huron',duration:'3:28',match:'92%',preview_url:null,spotify_url:'https://www.deezer.com/search/the%20night%20we%20met'},{title:'Skinny Love',artist:'Bon Iver',duration:'3:58',match:'89%',preview_url:null,spotify_url:'https://www.deezer.com/search/skinny%20love'},{title:'Mad World',artist:'Gary Jules',duration:'3:07',match:'86%',preview_url:null,spotify_url:'https://www.deezer.com/search/mad%20world'}],
+  angry:     [{title:'Numb',artist:'Linkin Park',duration:'3:05',match:'97%',preview_url:null,spotify_url:'https://www.deezer.com/search/numb%20linkin%20park'},{title:'Eye of the Tiger',artist:'Survivor',duration:'4:04',match:'94%',preview_url:null,spotify_url:'https://www.deezer.com/search/eye%20of%20the%20tiger'},{title:'Killing in the Name',artist:'RATM',duration:'5:13',match:'91%',preview_url:null,spotify_url:'https://www.deezer.com/search/killing%20in%20the%20name'},{title:'Break Stuff',artist:'Limp Bizkit',duration:'2:46',match:'88%',preview_url:null,spotify_url:'https://www.deezer.com/search/break%20stuff'},{title:'Given Up',artist:'Linkin Park',duration:'3:09',match:'85%',preview_url:null,spotify_url:'https://www.deezer.com/search/given%20up'}],
+  neutral:   [{title:'Yellow',artist:'Coldplay',duration:'4:29',match:'95%',preview_url:null,spotify_url:'https://www.deezer.com/search/yellow%20coldplay'},{title:'Budapest',artist:'George Ezra',duration:'3:15',match:'92%',preview_url:null,spotify_url:'https://www.deezer.com/search/budapest%20george%20ezra'},{title:'Coffee',artist:'beabadoobee',duration:'1:53',match:'90%',preview_url:null,spotify_url:'https://www.deezer.com/search/coffee%20beabadoobee'},{title:'Sunset Lover',artist:'Petit Biscuit',duration:'3:56',match:'87%',preview_url:null,spotify_url:'https://www.deezer.com/search/sunset%20lover'},{title:'Somewhere Only We Know',artist:'Keane',duration:'3:57',match:'84%',preview_url:null,spotify_url:'https://www.deezer.com/search/somewhere%20only%20we%20know'}],
+  surprised: [{title:'Bohemian Rhapsody',artist:'Queen',duration:'5:55',match:'96%',preview_url:null,spotify_url:'https://www.deezer.com/search/bohemian%20rhapsody'},{title:'Mr Brightside',artist:'The Killers',duration:'3:42',match:'93%',preview_url:null,spotify_url:'https://www.deezer.com/search/mr%20brightside'},{title:'Supermassive Black Hole',artist:'Muse',duration:'3:32',match:'90%',preview_url:null,spotify_url:'https://www.deezer.com/search/supermassive%20black%20hole'},{title:'Starman',artist:'David Bowie',duration:'4:16',match:'87%',preview_url:null,spotify_url:'https://www.deezer.com/search/starman%20bowie'},{title:'Take On Me',artist:'A-ha',duration:'3:45',match:'83%',preview_url:null,spotify_url:'https://www.deezer.com/search/take%20on%20me'}],
+  fearful:   [{title:'Sound of Silence',artist:'Simon and Garfunkel',duration:'3:05',match:'96%',preview_url:null,spotify_url:'https://www.deezer.com/search/sound%20of%20silence'},{title:'Creep',artist:'Radiohead',duration:'3:56',match:'93%',preview_url:null,spotify_url:'https://www.deezer.com/search/creep%20radiohead'},{title:'Mad World',artist:'Gary Jules',duration:'3:07',match:'90%',preview_url:null,spotify_url:'https://www.deezer.com/search/mad%20world'},{title:'Black',artist:'Pearl Jam',duration:'5:43',match:'87%',preview_url:null,spotify_url:'https://www.deezer.com/search/black%20pearl%20jam'},{title:'Cemetery Gates',artist:'The Smiths',duration:'5:31',match:'84%',preview_url:null,spotify_url:'https://www.deezer.com/search/cemetery%20gates'}],
+  disgusted: [{title:'Toxicity',artist:'System of a Down',duration:'3:38',match:'95%',preview_url:null,spotify_url:'https://www.deezer.com/search/toxicity'},{title:'Chop Suey',artist:'System of a Down',duration:'3:30',match:'92%',preview_url:null,spotify_url:'https://www.deezer.com/search/chop%20suey'},{title:'Cochise',artist:'Audioslave',duration:'3:44',match:'89%',preview_url:null,spotify_url:'https://www.deezer.com/search/cochise%20audioslave'},{title:'Down with the Sickness',artist:'Disturbed',duration:'4:37',match:'86%',preview_url:null,spotify_url:'https://www.deezer.com/search/down%20with%20the%20sickness'},{title:'Headstrong',artist:'Trapt',duration:'3:42',match:'82%',preview_url:null,spotify_url:'https://www.deezer.com/search/headstrong%20trapt'}],
 };
 
 const TEXT_EXAMPLES = [
@@ -1086,20 +685,10 @@ const TEXT_EXAMPLES = [
   "I feel really down and sad, nothing seems to be working out.",
   "I am absolutely furious, this is completely unacceptable!",
   "Just another normal day, nothing special going on.",
-  "Oh wow, I did not expect that at all, totally shocked!",
+  "Oh wow I did not expect that at all, totally shocked!",
   "I am scared and anxious about what might happen next.",
   "This is disgusting and revolting, I cannot stand it.",
 ];
-
-let stream = null;
-let isPlaying = false;
-let currentTrack = null;
-let currentTrackIdx = 0;
-let currentEmotion = null;
-let waveInterval = null;
-let wavePos = 0;
-let fpsInterval = null;
-let sessionData = { detections:0, songs:0, emotions:{}, confidences:[] };
 
 // ── INIT ──────────────────────────────────────────────────────────────
 function initWaveform() {
@@ -1120,7 +709,7 @@ function initExamples() {
     const btn = document.createElement('button');
     btn.className = 'ctrl-btn';
     btn.style.cssText = 'text-align:left;font-size:12px;padding:8px 12px;width:100%;';
-    btn.textContent = ex.length > 60 ? ex.substring(0,60)+'...' : ex;
+    btn.textContent = ex.length>60 ? ex.substring(0,60)+'...' : ex;
     btn.onclick = () => { document.getElementById('textInput').value = ex; analyzeText(); };
     el.appendChild(btn);
   });
@@ -1133,8 +722,8 @@ function showSection(name) {
   });
   document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
   const idx = ['detect','image','text','analytics','model','history'].indexOf(name);
-  document.querySelectorAll('.nav-pill')[idx].classList.add('active');
-  if(name==='model') { setTimeout(drawTrainingChart, 100); setTimeout(fillPerClass, 100); }
+  if(idx>=0) document.querySelectorAll('.nav-pill')[idx].classList.add('active');
+  if(name==='model') { setTimeout(drawTrainingChart,100); setTimeout(fillPerClass,100); }
   if(name==='analytics') updateAnalyticsView();
 }
 
@@ -1152,7 +741,7 @@ async function startCamera() {
     document.getElementById('captureBtn').disabled = false;
     document.getElementById('stopBtn').style.display = 'flex';
     fpsInterval = setInterval(()=>{ document.getElementById('fpsTag').textContent = Math.floor(Math.random()*5+26); },1000);
-    showToast('📷','Camera Active','Face detection enabled — click Analyze');
+    showToast('📷','Camera Active','Click Analyze to detect your emotion');
   } catch(e) {
     showToast('⚠️','Camera Error','Cannot access camera — using Demo mode');
     runDemoAnalysis();
@@ -1175,23 +764,57 @@ function stopCamera() {
 async function captureAndAnalyze() {
   const proc = document.getElementById('procOverlay');
   proc.classList.add('active');
-  // In production: capture canvas frame and POST to /api/detect/live
-  await new Promise(r=>setTimeout(r,1800));
-  proc.classList.remove('active');
-  runDemoAnalysis();
+  try {
+    const video   = document.getElementById('videoEl');
+    const canvas  = document.getElementById('captureCanvas');
+    canvas.width  = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0);
+    const imageData = canvas.toDataURL('image/jpeg', 0.8);
+    const response  = await fetch(API_BASE+'/detect/live', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({image: imageData})
+    });
+    const data = await response.json();
+    proc.classList.remove('active');
+    if(data.faces && data.faces.length > 0) {
+      handleFaceResult(data, 'emotionList','dominantEmoji','dominantEmotionText','dominantConf','confCircle','confRingText','musicList','Camera');
+    } else {
+      showToast('⚠️','No face','Please face the camera clearly');
+    }
+  } catch(e) {
+    proc.classList.remove('active');
+    showToast('⚠️','API Error','Running demo mode');
+    runDemoAnalysis();
+  }
 }
 
-// ── DEMO / SIMULATION ─────────────────────────────────────────────────
 function runDemoAnalysis() {
-  const scores = EMOTIONS.map(() => Math.random());
-  const total = scores.reduce((a,b)=>a+b,0);
-  const probs = scores.map(s=>s/total);
+  const scores = EMOTIONS.map(()=>Math.random());
+  const total  = scores.reduce((a,b)=>a+b,0);
+  const probs  = scores.map(s=>s/total);
   const maxIdx = probs.indexOf(Math.max(...probs));
-  displayEmotionResults(probs, maxIdx, 'emotionList', 'dominantEmoji', 'dominantEmotionText', 'dominantConf', 'confCircle', 'confRingText');
-  loadMusicForEmotion(EMOTIONS[maxIdx].id, 'musicList');
+  const emotion = EMOTIONS[maxIdx];
+  displayEmotionResults(probs, maxIdx, 'emotionList','dominantEmoji','dominantEmotionText','dominantConf','confCircle','confRingText');
+  const tracks = FALLBACK_MUSIC[emotion.id] || [];
+  loadMusicCards(tracks, 'musicList');
+  currentEmotion = emotion.id;
+  addHistoryEntry(emotion, Math.round(probs[maxIdx]*100), 'Demo');
+  updateStats(Math.round(probs[maxIdx]*100), emotion.label);
+}
+
+function handleFaceResult(data, listId, emojiId, textId, confId, circleId, ringId, musicListId, mode) {
+  const face    = data.faces[0];
+  const probs   = face.probabilities;
+  const probArr = EMOTIONS.map(e => probs[e.label] || 0);
+  const maxIdx  = probArr.indexOf(Math.max(...probArr));
+  displayEmotionResults(probArr, maxIdx, listId, emojiId, textId, confId, circleId, ringId);
+  const tracks  = data.music || FALLBACK_MUSIC[EMOTIONS[maxIdx].id] || [];
+  loadMusicCards(tracks, musicListId);
   currentEmotion = EMOTIONS[maxIdx].id;
-  addHistoryEntry(EMOTIONS[maxIdx], Math.round(probs[maxIdx]*100), 'Camera');
-  updateStats(Math.round(probs[maxIdx]*100), EMOTIONS[maxIdx].label);
+  addHistoryEntry(EMOTIONS[maxIdx], Math.round(face.confidence*100), mode);
+  updateStats(Math.round(face.confidence*100), EMOTIONS[maxIdx].label);
+  showToast(EMOTIONS[maxIdx].emoji, EMOTIONS[maxIdx].label+' detected!', 'Confidence: '+Math.round(face.confidence*100)+'%');
 }
 
 // ── FILE UPLOAD ───────────────────────────────────────────────────────
@@ -1208,21 +831,29 @@ function handleFileUpload(e) {
 async function processUploadedImage(file) {
   const reader = new FileReader();
   reader.onload = async (e) => {
-    const preview = document.getElementById('uploadedPreview');
-    const img = document.getElementById('previewImg');
-    img.src = e.target.result;
-    preview.style.display = 'block';
-    showToast('🔍','Processing Image','Running CNN inference...');
-    await new Promise(r=>setTimeout(r,2000));
-    const scores = EMOTIONS.map(()=>Math.random());
-    const total = scores.reduce((a,b)=>a+b,0);
-    const probs = scores.map(s=>s/total);
-    const maxIdx = probs.indexOf(Math.max(...probs));
-    displayEmotionResults(probs, maxIdx, 'imgEmotionList', 'imgEmoji', 'imgEmotionText', 'imgConf', null, null);
-    loadMusicForEmotion(EMOTIONS[maxIdx].id, 'imgMusicList');
-    addHistoryEntry(EMOTIONS[maxIdx], Math.round(probs[maxIdx]*100), 'Image');
-    updateStats(Math.round(probs[maxIdx]*100), EMOTIONS[maxIdx].label);
-    showToast(EMOTIONS[maxIdx].emoji, EMOTIONS[maxIdx].label+' detected!', 'From uploaded image');
+    document.getElementById('previewImg').src = e.target.result;
+    document.getElementById('uploadedPreview').style.display = 'block';
+    showToast('🔍','Processing','Running CNN inference...');
+    try {
+      const response = await fetch(API_BASE+'/detect/image', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({image: e.target.result})
+      });
+      const data = await response.json();
+      if(data.faces && data.faces.length > 0) {
+        handleFaceResult(data,'imgEmotionList','imgEmoji','imgEmotionText','imgConf',null,null,'imgMusicList','Image');
+      } else {
+        showToast('⚠️','No face found','Try a clearer face image');
+      }
+    } catch(err) {
+      showToast('⚠️','API Error','Demo mode active');
+      const scores = EMOTIONS.map(()=>Math.random());
+      const total  = scores.reduce((a,b)=>a+b,0);
+      const probs  = scores.map(s=>s/total);
+      const maxIdx = probs.indexOf(Math.max(...probs));
+      displayEmotionResults(probs, maxIdx,'imgEmotionList','imgEmoji','imgEmotionText','imgConf',null,null);
+      loadMusicCards(FALLBACK_MUSIC[EMOTIONS[maxIdx].id]||[],'imgMusicList');
+    }
   };
   reader.readAsDataURL(file);
 }
@@ -1231,91 +862,74 @@ async function processUploadedImage(file) {
 async function analyzeText() {
   const text = document.getElementById('textInput').value.trim();
   if(!text){ showToast('⚠️','Empty','Please enter some text first'); return; }
-  showToast('🔍','Analyzing Text','Running NLP model...');
-  // In production: POST to /api/detect/text
-  await new Promise(r=>setTimeout(r,1500));
-  // Simulate NLP output with keyword hints for realism
-  const lower = text.toLowerCase();
-  let biasIdx = -1;
-  if(lower.includes('happy')||lower.includes('excit')||lower.includes('great')||lower.includes('love')) biasIdx=0;
-  else if(lower.includes('sad')||lower.includes('down')||lower.includes('cry')||lower.includes('depress')) biasIdx=1;
-  else if(lower.includes('angry')||lower.includes('furious')||lower.includes('mad')||lower.includes('hate')) biasIdx=2;
-  else if(lower.includes('scared')||lower.includes('fear')||lower.includes('anxious')) biasIdx=5;
-  else if(lower.includes('disgust')||lower.includes('revolting')||lower.includes('gross')) biasIdx=6;
-  else if(lower.includes('shocked')||lower.includes('surprise')||lower.includes('wow')) biasIdx=4;
-  const scores = EMOTIONS.map((e,i)=> biasIdx===i ? Math.random()*0.4+0.5 : Math.random()*0.3);
-  const total = scores.reduce((a,b)=>a+b,0);
-  const probs = scores.map(s=>s/total);
-  const maxIdx = probs.indexOf(Math.max(...probs));
-  displayEmotionResults(probs, maxIdx, 'textEmotionList', 'textEmoji', 'textEmotionText', 'textConf', null, null);
-  loadMusicForEmotion(EMOTIONS[maxIdx].id, 'textMusicList');
-  const result = document.getElementById('textResult');
-  document.getElementById('textResultContent').textContent = '"' + text + '"';
-  result.classList.add('show');
-  addHistoryEntry(EMOTIONS[maxIdx], Math.round(probs[maxIdx]*100), 'Text');
-  updateStats(Math.round(probs[maxIdx]*100), EMOTIONS[maxIdx].label);
-  showToast(EMOTIONS[maxIdx].emoji, EMOTIONS[maxIdx].label+' in text!', 'NLP confidence: '+Math.round(probs[maxIdx]*100)+'%');
+  showToast('🔍','Analyzing','Running NLP model...');
+  try {
+    const response = await fetch(API_BASE+'/detect/text', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({text: text})
+    });
+    const data  = await response.json();
+    const probs = data.probabilities;
+    const probArr = EMOTIONS.map(e => probs[e.label] || 0);
+    const maxIdx  = probArr.indexOf(Math.max(...probArr));
+    displayEmotionResults(probArr, maxIdx,'textEmotionList','textEmoji','textEmotionText','textConf',null,null);
+    const tracks = data.music || FALLBACK_MUSIC[EMOTIONS[maxIdx].id] || [];
+    loadMusicCards(tracks, 'textMusicList');
+    document.getElementById('textResultContent').textContent = '"'+text+'"';
+    document.getElementById('textResult').classList.add('show');
+    addHistoryEntry(EMOTIONS[maxIdx], Math.round(data.confidence*100), 'Text');
+    updateStats(Math.round(data.confidence*100), EMOTIONS[maxIdx].label);
+    showToast(EMOTIONS[maxIdx].emoji, EMOTIONS[maxIdx].label+' in text!', 'Confidence: '+Math.round(data.confidence*100)+'%');
+  } catch(e) {
+    showToast('⚠️','API Error','Running demo mode');
+  }
 }
-
 function loadTextExample() {
   const ex = TEXT_EXAMPLES[Math.floor(Math.random()*TEXT_EXAMPLES.length)];
   document.getElementById('textInput').value = ex;
 }
-function clearText() {
-  document.getElementById('textInput').value = '';
-  document.getElementById('textResult').classList.remove('show');
-}
 
 // ── EMOTION DISPLAY ───────────────────────────────────────────────────
-function displayEmotionResults(probs, dominantIdx, listId, emojiId, textId, confId, circleId, ringTextId) {
+function displayEmotionResults(probs, dominantIdx, listId, emojiId, textId, confId, circleId, ringId) {
   const dominant = EMOTIONS[dominantIdx];
-  const conf = Math.round(probs[dominantIdx]*100);
+  const conf     = Math.round(probs[dominantIdx]*100);
   document.getElementById(emojiId).textContent = dominant.emoji;
   const eText = document.getElementById(textId);
   eText.textContent = dominant.label;
   eText.style.color = dominant.color;
   document.getElementById(confId).innerHTML = '<span>'+conf+'%</span>';
-  if(circleId){
-    const offset = 150.8 - (conf/100)*150.8;
-    document.getElementById(circleId).style.strokeDashoffset = offset;
-  }
-  if(ringTextId) document.getElementById(ringTextId).textContent = conf+'%';
-  const list = document.getElementById(listId);
+  if(circleId) document.getElementById(circleId).style.strokeDashoffset = 150.8-(conf/100)*150.8;
+  if(ringId)   document.getElementById(ringId).textContent = conf+'%';
+  const list   = document.getElementById(listId);
   list.innerHTML = '';
   const sorted = EMOTIONS.map((e,i)=>({...e,prob:probs[i]})).sort((a,b)=>b.prob-a.prob);
   sorted.forEach(e => {
     const pct = Math.round(e.prob*100);
     const row = document.createElement('div');
     row.className = 'emotion-row';
-    row.innerHTML = `
-      <div class="emotion-row-top">
-        <div class="emotion-name">
-          <div class="emotion-dot" style="background:${e.color}"></div>
-          <span>${e.emoji} ${e.label}</span>
-        </div>
-        <div class="emotion-pct">${pct}%</div>
-      </div>
-      <div class="emotion-bar-bg">
-        <div class="emotion-bar-fill" style="background:${e.color};width:0%" data-w="${pct}%"></div>
-      </div>`;
+    row.innerHTML = `<div class="emotion-row-top"><div class="emotion-name"><div class="emotion-dot" style="background:${e.color}"></div><span>${e.emoji} ${e.label}</span></div><div class="emotion-pct">${pct}%</div></div><div class="emotion-bar-bg"><div class="emotion-bar-fill" style="background:${e.color};width:0%" data-w="${pct}%"></div></div>`;
     list.appendChild(row);
   });
   setTimeout(()=>{ list.querySelectorAll('.emotion-bar-fill').forEach(b=>{ b.style.width=b.dataset.w; }); },50);
 }
 
 // ── MUSIC ─────────────────────────────────────────────────────────────
-function loadMusicForEmotion(emotionId, listId) {
-  const tracks = MUSIC_DB[emotionId] || [];
+function loadMusicCards(tracks, listId) {
+  allTracks = tracks;
   const list = document.getElementById(listId);
   list.innerHTML = '';
+  if(!tracks || tracks.length===0){
+    list.innerHTML = '<div style="text-align:center;padding:20px;color:var(--muted);">No tracks found</div>';
+    return;
+  }
   tracks.forEach((t,i) => {
     const card = document.createElement('div');
     card.className = 'music-card';
-    card.onclick = () => { playTrack(t,i,emotionId); };
+    card.id = 'mcard-'+i;
+    card.onclick = () => playAPITrack(t, i);
     card.innerHTML = `
       <div class="music-thumb">
-        <span style="position:relative;z-index:1">${t.emoji}</span>
-        <div class="play-indicator">▶</div>
+        ${t.image ? `<img src="${t.image}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.textContent='🎵'"/>` : '🎵'}
       </div>
       <div class="music-info">
         <div class="music-title">${t.title}</div>
@@ -1323,41 +937,63 @@ function loadMusicForEmotion(emotionId, listId) {
       </div>
       <div class="music-meta">
         <div class="music-duration">${t.duration}</div>
-        <div class="music-match">${t.match}</div>
+        <div class="music-match">${t.match||'90%'}</div>
       </div>`;
     list.appendChild(card);
   });
-  if(tracks.length) playTrack(tracks[0],0,emotionId);
+  if(tracks.length) playAPITrack(tracks[0], 0);
 }
 
-function playTrack(track,idx,emotionId) {
-  currentTrack = track; currentTrackIdx = idx; isPlaying = true;
-  document.getElementById('playerTitle').textContent = track.title;
-  document.getElementById('playerArtist').textContent = track.artist + ' · Mood: ' + emotionId;
-  document.getElementById('playerThumb').textContent = track.emoji;
+function playAPITrack(track, idx) {
+  if(currentAudio){ currentAudio.pause(); currentAudio=null; }
+  document.querySelectorAll('.music-card').forEach(c=>c.classList.remove('playing'));
+  const card = document.getElementById('mcard-'+idx);
+  if(card) card.classList.add('playing');
+  currentTrack    = track;
+  currentTrackIdx = idx;
+  isPlaying       = true;
+  document.getElementById('playerTitle').textContent  = track.title;
+  document.getElementById('playerArtist').textContent = track.artist + ' · Deezer';
+  document.getElementById('playerThumb').textContent  = '🎵';
   document.getElementById('playerThumb').classList.add('spinning');
   document.getElementById('playPauseBtn').textContent = '⏸';
   animateWaveform();
   sessionData.songs++;
+  if(track.preview_url) {
+    currentAudio = new Audio(track.preview_url);
+    currentAudio.volume = 0.8;
+    currentAudio.play()
+      .then(()=> showToast('🎵','Now Playing', track.title+' — '+track.artist))
+      .catch(()=> showToast('🎵', track.title, 'Click to open on Deezer'));
+    currentAudio.onended = ()=>{
+      const next = (idx+1) % allTracks.length;
+      playAPITrack(allTracks[next], next);
+    };
+  } else {
+    showToast('🎵', track.title, 'Opening Deezer...');
+    if(track.spotify_url && track.spotify_url !== '#') window.open(track.spotify_url, '_blank');
+  }
 }
 
 function togglePlay() {
   isPlaying = !isPlaying;
   document.getElementById('playPauseBtn').textContent = isPlaying?'⏸':'▶';
+  if(currentAudio){
+    isPlaying ? currentAudio.play() : currentAudio.pause();
+  }
   if(isPlaying){ document.getElementById('playerThumb').classList.add('spinning'); animateWaveform(); }
   else { document.getElementById('playerThumb').classList.remove('spinning'); if(waveInterval) clearInterval(waveInterval); }
 }
 
 function nextTrack() {
-  if(!currentEmotion) return;
-  const tracks = MUSIC_DB[currentEmotion];
-  playTrack(tracks[(currentTrackIdx+1)%tracks.length],(currentTrackIdx+1)%tracks.length,currentEmotion);
+  if(!allTracks.length) return;
+  const next = (currentTrackIdx+1) % allTracks.length;
+  playAPITrack(allTracks[next], next);
 }
 function prevTrack() {
-  if(!currentEmotion) return;
-  const tracks = MUSIC_DB[currentEmotion];
-  const prev = (currentTrackIdx-1+tracks.length)%tracks.length;
-  playTrack(tracks[prev],prev,currentEmotion);
+  if(!allTracks.length) return;
+  const prev = (currentTrackIdx-1+allTracks.length) % allTracks.length;
+  playAPITrack(allTracks[prev], prev);
 }
 
 function animateWaveform() {
@@ -1374,24 +1010,20 @@ function animateWaveform() {
     });
     const mm = Math.floor(wavePos/60);
     const ss = String(wavePos%60).padStart(2,'0');
-    document.getElementById('playerTime').textContent = mm+':'+ss+' / 3:30';
+    document.getElementById('playerTime').textContent = mm+':'+ss+' / 0:30';
   },100);
 }
 
 // ── HISTORY ───────────────────────────────────────────────────────────
 function addHistoryEntry(emotion, conf, mode) {
   const panel = document.getElementById('historyPanel');
-  if(panel.querySelector('[data-empty]') || panel.textContent.includes('No detections')) panel.innerHTML='';
-  const now = new Date();
+  if(panel.textContent.includes('No detections')) panel.innerHTML='';
+  const now     = new Date();
   const timeStr = now.toLocaleTimeString('en',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  const track = currentTrack || {title:'—', artist:'—'};
-  const row = document.createElement('div');
+  const track   = currentTrack || {title:'—',artist:'—'};
+  const row     = document.createElement('div');
   row.className = 'history-row';
-  row.innerHTML = `
-    <div class="history-time">${timeStr}</div>
-    <div class="history-emotion" style="color:${emotion.color}">${emotion.emoji} ${emotion.label}</div>
-    <div class="history-song">${track.title} — ${track.artist}</div>
-    <div class="history-conf">${conf}% · ${mode}</div>`;
+  row.innerHTML = `<div class="history-time">${timeStr}</div><div class="history-emotion" style="color:${emotion.color}">${emotion.emoji} ${emotion.label}</div><div class="history-song">${track.title} — ${track.artist}</div><div class="history-conf">${conf}% · ${mode}</div>`;
   panel.insertBefore(row, panel.firstChild);
 }
 function clearHistory() {
@@ -1403,10 +1035,13 @@ function updateStats(conf, emotionLabel) {
   sessionData.detections++;
   sessionData.confidences.push(conf);
   sessionData.emotions[emotionLabel] = (sessionData.emotions[emotionLabel]||0)+1;
+  document.getElementById('statDetections').textContent = sessionData.detections;
+  document.getElementById('statSongs').textContent      = sessionData.songs;
 }
+
 function updateAnalyticsView() {
   document.getElementById('statDetections').textContent = sessionData.detections;
-  document.getElementById('statSongs').textContent = sessionData.songs;
+  document.getElementById('statSongs').textContent      = sessionData.songs;
   if(sessionData.confidences.length){
     const avg = Math.round(sessionData.confidences.reduce((a,b)=>a+b)/sessionData.confidences.length);
     document.getElementById('statConf').textContent = avg+'%';
@@ -1414,22 +1049,16 @@ function updateAnalyticsView() {
   const ems = sessionData.emotions;
   if(Object.keys(ems).length){
     const top = Object.entries(ems).sort((a,b)=>b[1]-a[1])[0];
-    const em = EMOTIONS.find(e=>e.label===top[0]);
+    const em  = EMOTIONS.find(e=>e.label===top[0]);
     document.getElementById('statTopEmotion').textContent = (em?em.emoji+' ':'')+top[0];
   }
   const chart = document.getElementById('emotionChart');
   if(Object.keys(ems).length){
     const max = Math.max(...Object.values(ems));
     chart.innerHTML = Object.entries(ems).map(([k,v])=>{
-      const em = EMOTIONS.find(e=>e.label===k);
+      const em  = EMOTIONS.find(e=>e.label===k);
       const pct = Math.round((v/max)*100);
-      return `<div style="display:flex;align-items:center;gap:10px;font-size:13px;margin-bottom:6px;">
-        <div style="min-width:90px;color:var(--muted)">${em?em.emoji:''} ${k}</div>
-        <div style="flex:1;height:6px;background:rgba(255,255,255,0.05);border-radius:4px;overflow:hidden;">
-          <div style="height:100%;width:${pct}%;background:${em?em.color:'var(--accent)'};border-radius:4px;"></div>
-        </div>
-        <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);min-width:20px;">${v}</div>
-      </div>`;
+      return `<div style="display:flex;align-items:center;gap:10px;font-size:13px;margin-bottom:6px;"><div style="min-width:90px;color:var(--muted)">${em?em.emoji:''} ${k}</div><div style="flex:1;height:6px;background:rgba(255,255,255,0.05);border-radius:4px;overflow:hidden;"><div style="height:100%;width:${pct}%;background:${em?em.color:'var(--accent)'};border-radius:4px;"></div></div><div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);min-width:20px;">${v}</div></div>`;
     }).join('');
   }
   drawConfChart();
@@ -1438,20 +1067,12 @@ function updateAnalyticsView() {
 function drawConfChart() {
   const canvas = document.getElementById('confChart');
   if(!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx  = canvas.getContext('2d');
   const data = sessionData.confidences.slice(-20);
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  if(data.length<2){
-    ctx.fillStyle='rgba(255,255,255,0.1)';
-    ctx.font='13px Space Grotesk';
-    ctx.textAlign='center';
-    ctx.fillText('Run more detections to see trend',canvas.width/2,canvas.height/2);
-    return;
-  }
+  if(data.length<2){ ctx.fillStyle='rgba(255,255,255,0.1)';ctx.font='13px Space Grotesk';ctx.textAlign='center';ctx.fillText('Run more detections',canvas.width/2,canvas.height/2); return; }
   const W=canvas.width,H=canvas.height,pad=20;
   const xStep=(W-pad*2)/(data.length-1);
-  ctx.strokeStyle='rgba(255,255,255,0.04)'; ctx.lineWidth=1;
-  for(let i=0;i<=4;i++){ const y=pad+(H-pad*2)*(i/4); ctx.beginPath();ctx.moveTo(pad,y);ctx.lineTo(W-pad,y);ctx.stroke(); }
   const grad=ctx.createLinearGradient(0,pad,0,H-pad);
   grad.addColorStop(0,'rgba(124,58,237,0.3)'); grad.addColorStop(1,'rgba(124,58,237,0)');
   ctx.beginPath(); ctx.moveTo(pad,H-pad);
@@ -1460,16 +1081,15 @@ function drawConfChart() {
   ctx.beginPath(); ctx.strokeStyle='#7c3aed'; ctx.lineWidth=2;
   data.forEach((v,i)=>{ const x=pad+i*xStep,y=pad+(H-pad*2)*(1-v/100); i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
   ctx.stroke();
-  data.forEach((v,i)=>{ const x=pad+i*xStep,y=pad+(H-pad*2)*(1-v/100); ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fillStyle='#a78bfa';ctx.fill(); });
 }
 
 function drawTrainingChart() {
   const canvas = document.getElementById('trainingChart');
   if(!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx=canvas.getContext('2d');
   ctx.clearRect(0,0,canvas.width,canvas.height);
   const W=canvas.width,H=canvas.height,pad=40;
-  const epochs=50, trainAcc=[], valAcc=[];
+  const epochs=20, trainAcc=[], valAcc=[];
   for(let i=0;i<epochs;i++){
     const t=i/epochs;
     trainAcc.push(0.4+0.35*Math.tanh(5*t)+Math.random()*0.015);
@@ -1477,18 +1097,15 @@ function drawTrainingChart() {
   }
   ctx.strokeStyle='rgba(255,255,255,0.05)'; ctx.lineWidth=1;
   for(let i=0;i<=4;i++){ const y=pad+(H-pad*2)*(i/4); ctx.beginPath();ctx.moveTo(pad,y);ctx.lineTo(W-pad,y);ctx.stroke(); }
-  const drawCurve=(data,color)=>{
+  const draw=(data,color)=>{
     ctx.beginPath(); ctx.strokeStyle=color; ctx.lineWidth=2;
     data.forEach((v,i)=>{ const x=pad+(W-pad*2)*(i/(data.length-1)),y=pad+(H-pad*2)*(1-((v-0.3)/0.5)); i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
     ctx.stroke();
   };
-  drawCurve(trainAcc,'#7c3aed');
-  drawCurve(valAcc,'#ec4899');
+  draw(trainAcc,'#7c3aed'); draw(valAcc,'#ec4899');
   ctx.font='12px Space Grotesk';
-  ctx.fillStyle='#7c3aed'; ctx.fillRect(W-160,20,16,3);
-  ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.fillText('Train Accuracy',W-140,25);
-  ctx.fillStyle='#ec4899'; ctx.fillRect(W-160,38,16,3);
-  ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.fillText('Val Accuracy',W-140,43);
+  ctx.fillStyle='#7c3aed'; ctx.fillRect(W-160,20,16,3); ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.fillText('Train Accuracy',W-140,25);
+  ctx.fillStyle='#ec4899'; ctx.fillRect(W-160,38,16,3); ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.fillText('Val Accuracy',W-140,43);
 }
 
 function fillPerClass() {
@@ -1496,22 +1113,15 @@ function fillPerClass() {
   if(!el) return;
   el.innerHTML = EMOTIONS.map(e=>{
     const acc = Math.round(55+Math.random()*30);
-    return `<div style="display:flex;align-items:center;gap:8px;font-size:11px;">
-      <div style="min-width:80px;color:var(--muted)">${e.emoji} ${e.label}</div>
-      <div style="flex:1;height:4px;background:rgba(255,255,255,0.05);border-radius:2px;">
-        <div style="height:100%;width:${acc}%;background:${e.color};border-radius:2px;"></div>
-      </div>
-      <div style="font-family:'DM Mono',monospace;min-width:35px;text-align:right;color:var(--muted);">${acc}%</div>
-    </div>`;
+    return `<div style="display:flex;align-items:center;gap:8px;font-size:11px;"><div style="min-width:80px;color:var(--muted)">${e.emoji} ${e.label}</div><div style="flex:1;height:4px;background:rgba(255,255,255,0.05);border-radius:2px;"><div style="height:100%;width:${acc}%;background:${e.color};border-radius:2px;"></div></div><div style="font-family:'DM Mono',monospace;min-width:35px;text-align:right;color:var(--muted);">${acc}%</div></div>`;
   }).join('');
 }
 
-// ── TOAST ─────────────────────────────────────────────────────────────
 function showToast(icon,title,msg) {
-  document.getElementById('toastIcon').textContent=icon;
-  document.getElementById('toastTitle').textContent=title;
-  document.getElementById('toastMsg').textContent=msg;
-  const t=document.getElementById('toast');
+  document.getElementById('toastIcon').textContent  = icon;
+  document.getElementById('toastTitle').textContent = title;
+  document.getElementById('toastMsg').textContent   = msg;
+  const t = document.getElementById('toast');
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),3500);
 }
