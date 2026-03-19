@@ -1,0 +1,14 @@
+song,artist,genre,mood,link
+
+Happy Vibes,Artist A,pop,happy,https://open.spotify.com/search/happy%20vibes
+Sunshine Beat,Artist B,pop,happy,https://open.spotify.com/search/sunshine%20beat
+Tears in Rain,Artist C,slow,sad,https://open.spotify.com/search/tears%20in%20rain
+Lonely Night,Artist D,acoustic,sad,https://open.spotify.com/search/lonely%20night
+Power Energy,Artist E,rock,energetic,https://open.spotify.com/search/power%20energy
+Fire Within,Artist F,rock,energetic,https://open.spotify.com/search/fire%20within
+Calm Breeze,Artist G,lofi,calm,https://open.spotify.com/search/calm%20breeze
+Peaceful Mind,Artist H,ambient,calm,https://open.spotify.com/search/peaceful%20mind
+Dance Party,Artist I,edm,party,https://open.spotify.com/search/dance%20party
+Night Club Beat,Artist J,edm,party,https://open.spotify.com/search/night%20club%20beat
+Chill Mood,Artist K,lofi,chill,https://open.spotify.com/search/chill%20mood
+Evening Relax,Artist L,lofi,chill,https://open.spotify.com/search/evening%20relax
