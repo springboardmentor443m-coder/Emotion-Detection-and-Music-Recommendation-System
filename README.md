@@ -1,7 +1,5 @@
 # Emotion-Detection-and-Music-Recommendation-System
 
-NOTE: create branches using your name and do not add code to main.
-
 # MoodMate
 
 MoodMate is an emotion-aware music recommendation app. It detects mood from:
