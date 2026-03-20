@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+.cache/
+.venv/
+venv/
+
+.env
+*.env
+
+.ipynb_checkpoints/
+
+Thumbs.db
+Desktop.ini
