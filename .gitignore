@@ -13,3 +13,6 @@ venv/
 
 Thumbs.db
 Desktop.ini
+backend/.cache
+.cache
+
