@@ -1,0 +1,7 @@
+{
+  "name": "MoodTune: AI Emotion Music",
+  "description": "A real-time facial and text emotion detection system that recommends music based on your current mood using AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
