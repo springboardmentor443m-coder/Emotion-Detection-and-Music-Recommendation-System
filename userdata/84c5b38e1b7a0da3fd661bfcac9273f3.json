@@ -1,0 +1,99 @@
+{
+  "email": "ammu@gmail.com",
+  "name": "Ammu",
+  "history": [
+    {
+      "emotion": "angry",
+      "confidence": 0.87,
+      "time": "27 Mar 2026, 21:57",
+      "method": "deepface"
+    },
+    {
+      "emotion": "happy",
+      "confidence": 0.97,
+      "time": "27 Mar 2026, 21:56",
+      "method": "nlp"
+    },
+    {
+      "emotion": "neutral",
+      "confidence": 1.0,
+      "time": "26 Mar 2026, 18:07",
+      "method": "deepface"
+    },
+    {
+      "emotion": "fear",
+      "confidence": 0.61,
+      "time": "26 Mar 2026, 18:07",
+      "method": "deepface"
+    },
+    {
+      "emotion": "angry",
+      "confidence": 0.87,
+      "time": "23 Mar 2026, 18:03",
+      "method": "deepface"
+    },
+    {
+      "emotion": "fear",
+      "confidence": 0.97,
+      "time": "23 Mar 2026, 17:57",
+      "method": "nlp"
+    },
+    {
+      "emotion": "disgust",
+      "confidence": 0.97,
+      "time": "23 Mar 2026, 17:55",
+      "method": "nlp"
+    },
+    {
+      "emotion": "angry",
+      "confidence": 0.97,
+      "time": "23 Mar 2026, 17:54",
+      "method": "nlp"
+    },
+    {
+      "emotion": "sad",
+      "confidence": 0.97,
+      "time": "23 Mar 2026, 17:53",
+      "method": "nlp"
+    },
+    {
+      "emotion": "neutral",
+      "confidence": 0.97,
+      "time": "20 Mar 2026, 18:56",
+      "method": "nlp"
+    },
+    {
+      "emotion": "happy",
+      "confidence": 0.97,
+      "time": "20 Mar 2026, 18:50",
+      "method": "nlp"
+    },
+    {
+      "emotion": "surprise",
+      "confidence": 0.99,
+      "time": "20 Mar 2026, 18:19",
+      "method": "deepface"
+    },
+    {
+      "emotion": "happy",
+      "confidence": 0.86,
+      "time": "20 Mar 2026, 18:19",
+      "method": "deepface"
+    }
+  ],
+  "journal": [
+    {
+      "id": 1774011021,
+      "title": "Happy",
+      "body": "Iam so happy today",
+      "emotion": "happy",
+      "date": "20 Mar 2026, 18:20"
+    }
+  ],
+  "chat": [
+    {
+      "role": "assistant",
+      "content": "Fresh start, Ammu! I am right here whenever you are ready. What is on your mind?"
+    }
+  ]
+}
