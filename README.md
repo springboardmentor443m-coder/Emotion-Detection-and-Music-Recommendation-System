@@ -10,7 +10,7 @@
 
 **Detect your emotion. Discover your music. Feel supported.**
 
-*A full-stack AI application that detects emotions through text, voice, photo, or camera — and recommends music that matches your mood.*
+*A full-stack AI application that detects emotions through text, photo, or camera — and recommends music that matches your mood.*
 
 </div>
 
@@ -45,8 +45,6 @@ MoodMate is an intelligent AI-based web application that:
 3. **Supports** you through an empathetic AI chat companion
 4. **Tracks** your emotional journey through history and journaling
 
-It was built as a B.Tech Computer Science final year project combining **Deep Learning**, **Natural Language Processing**, **Computer Vision**, and **Music Information Retrieval**.
-
 > *"MoodMate — Because every emotion deserves to be heard 💜"*
 
 ---
@@ -56,7 +54,6 @@ It was built as a B.Tech Computer Science final year project combining **Deep Le
 | Feature | Description |
 |---------|-------------|
 | ✍️ **Text Detection** | Type how you feel — NLP keyword scoring detects emotion instantly |
-| 🎤 **Voice Input** | Speak via microphone — Web Speech API transcribes and detects |
 | 📷 **Photo Upload** | Upload a face photo — DeepFace AI reads your expression |
 | 📸 **Live Camera** | Take a selfie — emotion detected automatically |
 | 🎵 **Smart Playlist** | 15 fresh songs from 50,683 tracks filtered by valence & energy |
@@ -107,8 +104,7 @@ MoodMate/
 │
 ├── models/
 │   ├── emotion_model.py      ← CNN model architecture
-│   ├── emotion_model.keras   ← Trained CNN weights (66.24% accuracy)
-│   └── transfer_learning_model.py  ← MobileNetV2 transfer learning
+│   ├── emotion_model.keras   ← Trained CNN weights 
 │
 └── userdata/                 ← Auto-created — stores user data
     ├── accounts.json         ← User accounts
@@ -298,17 +294,6 @@ Trained from scratch on the **FER-2013** dataset:
 😲 Surprise   🤢 Disgust   😐 Neutral
 ```
 
-### Transfer Learning Model (MobileNetV2)
-
-| Detail | Value |
-|--------|-------|
-| Base Model | MobileNetV2 (pretrained on ImageNet) |
-| Input Size | 96×96 RGB |
-| Fine-tuned Layers | Top 30 layers |
-| Expected Accuracy | 72–80% |
-| Saved As | emotion_model_tl.keras |
-
----
 
 ## 🎵 Music Recommendation Logic
 
@@ -415,16 +400,5 @@ python-multipart>=0.0.6
 
 ## 📄 License
 
-This project is developed for educational purposes as part of a B.Tech Computer Science project.
-
+This project is developed for educational purposes 
 ---
-
-<div align="center">
-
-**Built with 💜 by Ammu — B.Tech Computer Science 2025-26**
-
-*Mentor: Mr. Revanth*
-
-⭐ If you found this project helpful, please give it a star!
-
-</div>
