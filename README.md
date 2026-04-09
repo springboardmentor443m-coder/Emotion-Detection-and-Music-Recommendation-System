@@ -170,11 +170,11 @@ Place the trained CNN model in the models folder:
 ```
 MoodMate/
 └── models/
-    └── emotion_model.keras    ← place here
+    └── emotion_model.py    ← place here
     
 ```
 
-> The model was trained on FER-2013 dataset and achieves **71.24% test accuracy** — exceeding human-level performance (~65%) on this benchmark.
+> The model was trained on FER-2013 dataset and achieves **66.24% test accuracy** — exceeding human-level performance (~65%) on this benchmark.
 
 ---
 
@@ -285,7 +285,7 @@ Trained from scratch on the **FER-2013** dataset:
 | Optimizer | Adam |
 | Loss | Categorical Cross-Entropy |
 | Epochs | 50 |
-| **Test Accuracy** | **71.24%** |
+| **Test Accuracy** | **66.24%** |
 | Human Accuracy (FER-2013) | ~65% |
 
 ### 7 Emotion Classes
