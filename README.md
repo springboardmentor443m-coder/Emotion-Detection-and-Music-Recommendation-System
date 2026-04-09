@@ -297,7 +297,7 @@ Trained from scratch on the **FER-2013** dataset:
 
 ## Additional Model References
 
-The repository currently uses the compact 7-class model in models/emotion_model.keras for easier version control and deployment.
+The repository currently uses the compact 7-class model in models/emotion_model.py for easier version control and deployment.
 
 For reference, higher-accuracy Keras models are also available through Google Drive. These models are larger in size (around 242 MB each), so they are not included directly in this repository.
 
