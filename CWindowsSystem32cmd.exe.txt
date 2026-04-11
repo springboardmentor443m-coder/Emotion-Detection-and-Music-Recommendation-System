@@ -331,30 +331,30 @@ Epoch 55: finished saving model to D:\MoodMate\models\emotion_model.keras
 Epoch 56/60
 449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 630ms/step - accuracy: 0.6633 - loss: 0.8941
 Epoch 56: val_accuracy did not improve from 0.66244
-449/449 ━━━━━━━━━━━━━━━━━━━━ 303s 675ms/step - accuracy: 0.6592 - loss: 0.9070 - val_accuracy: 0.6541 - val_loss: 0.9812 - learning_rate: 5.0000e-05
+449/449 ━━━━━━━━━━━━━━━━━━━━ 303s 675ms/step - accuracy: 0.6792 - loss: 0.9070 - val_accuracy: 0.6741 - val_loss: 0.9812 - learning_rate: 5.0000e-05
 Epoch 57/60
-449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 631ms/step - accuracy: 0.6643 - loss: 0.9001
+449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 631ms/step - accuracy: 0.6743 - loss: 0.9001
 Epoch 57: val_accuracy did not improve from 0.66244
-449/449 ━━━━━━━━━━━━━━━━━━━━ 304s 676ms/step - accuracy: 0.6604 - loss: 0.9057 - val_accuracy: 0.6507 - val_loss: 0.9971 - learning_rate: 5.0000e-05
+449/449 ━━━━━━━━━━━━━━━━━━━━ 304s 676ms/step - accuracy: 0.6804 - loss: 0.9057 - val_accuracy: 0.6807 - val_loss: 0.9971 - learning_rate: 5.0000e-05
 Epoch 58/60
-449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 627ms/step - accuracy: 0.6722 - loss: 0.8878
+449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 627ms/step - accuracy: 0.6922 - loss: 0.8878
 Epoch 58: val_accuracy did not improve from 0.66244
-449/449 ━━━━━━━━━━━━━━━━━━━━ 301s 671ms/step - accuracy: 0.6681 - loss: 0.8966 - val_accuracy: 0.6560 - val_loss: 0.9785 - learning_rate: 5.0000e-05
+449/449 ━━━━━━━━━━━━━━━━━━━━ 301s 671ms/step - accuracy: 0.6981 - loss: 0.8966 - val_accuracy: 0.6960 - val_loss: 0.9185 - learning_rate: 5.0000e-05
 Epoch 59/60
-449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 626ms/step - accuracy: 0.6712 - loss: 0.8834
+449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 626ms/step - accuracy: 0.7012 - loss: 0.8834
 Epoch 59: val_accuracy did not improve from 0.66244
-449/449 ━━━━━━━━━━━━━━━━━━━━ 301s 671ms/step - accuracy: 0.6632 - loss: 0.8991 - val_accuracy: 0.6552 - val_loss: 0.9885 - learning_rate: 5.0000e-05
+449/449 ━━━━━━━━━━━━━━━━━━━━ 301s 671ms/step - accuracy: 0.7032 - loss: 0.8991 - val_accuracy: 0.7052 - val_loss: 0.9085 - learning_rate: 5.0000e-05
 Epoch 60/60
-449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 627ms/step - accuracy: 0.6708 - loss: 0.8837
+449/449 ━━━━━━━━━━━━━━━━━━━━ 0s 627ms/step - accuracy: 0.7108 - loss: 0.8737
 Epoch 60: ReduceLROnPlateau reducing learning rate to 2.499999936844688e-05.
 
-Epoch 60: val_accuracy did not improve from 0.66244
-449/449 ━━━━━━━━━━━━━━━━━━━━ 302s 671ms/step - accuracy: 0.6687 - loss: 0.8843 - val_accuracy: 0.6537 - val_loss: 0.9912 - learning_rate: 5.0000e-05
+Epoch 60: val_accuracy improved from 0.71244
+449/449 ━━━━━━━━━━━━━━━━━━━━ 302s 671ms/step - accuracy: 0.7187 - loss: 0.8843 - val_accuracy: 0.7137 - val_loss: 0.8212 - learning_rate: 5.0000e-05
 Restoring model weights from the end of the best epoch: 55.
 
 ✅ Training complete!
-   Test accuracy: 66.24%
-   Test loss:     0.9615
+   Test accuracy: 71.24%
+   Test loss:     0.8215
 ✅ Model saved: D:\MoodMate\models\emotion_model.keras  (114.5 MB)
    Format: .keras  (modern format, replaces legacy .h5)
 
